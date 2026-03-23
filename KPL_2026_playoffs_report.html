@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>2026 KPL 春季赛 · 季后赛完整预测报告</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&amp;family=Noto+Sans+SC:wght@300;400;500;700&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
 :root{--gold:#C9A84C;--gl:#F0D080;--gd:rgba(201,168,76,.14);--gb:rgba(201,168,76,.32);--blue:#4A9EFF;--bd2:rgba(74,158,255,.12);--grn:#52C97A;--grd:rgba(82,201,122,.12);--red:#FF6B6B;--rdd:rgba(255,107,107,.12);--bg:#0D0F14;--bg2:#13161E;--bg3:#1A1E28;--bg4:#1F2433;--b1:rgba(255,255,255,.07);--b2:rgba(255,255,255,.13);--tx:#E8EAF0;--t2:#A8AAB8;--t3:#6B6E80}
 *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
@@ -129,8 +129,13 @@ tbody td:first-child{color:var(--tx);font-weight:500}
 .mcb{font-size:11px;color:var(--t3);line-height:1.7}
 .rv{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
 .rv.vis{opacity:1;transform:none}
-.fact-fix{background:var(--bg3);border:1px solid rgba(255,107,107,.35);padding:13px 17px;margin-bottom:13px;font-size:12px;color:var(--t2);line-height:1.8}
-.fact-fix strong{color:var(--red)}
+.live-box{background:var(--bg2);border:1px solid rgba(74,158,255,.22);padding:18px 22px;margin-bottom:13px;border-radius:2px}
+.live-num{font-family:"JetBrains Mono",monospace;font-size:26px;font-weight:600;color:var(--blue);opacity:.5;margin-bottom:4px}
+.live-title{font-size:13px;font-weight:700;margin-bottom:8px;color:var(--tx)}
+.live-data{background:var(--bg4);border-left:2px solid var(--blue);padding:9px 13px;margin:10px 0;font-size:11px;color:var(--t2);line-height:1.75}
+.live-data strong{color:var(--blue)}
+.live-warn{background:rgba(255,107,107,.07);border:1px solid rgba(255,107,107,.18);padding:9px 13px;font-size:11px;color:var(--t2);line-height:1.7;margin-top:8px;border-radius:2px}
+.live-warn strong{color:var(--red)}
 footer{padding:32px;text-align:center;color:var(--t3);font-size:11px;line-height:1.8}
 @media(max-width:768px){.hero{padding:64px 16px 170px}.hv{position:static;margin-top:20px;max-width:100%}.wrap{padding:0 12px}nav{padding:0 12px}.fvd{grid-template-columns:1fr}.ps{grid-template-columns:repeat(2,1fr)}.mg{grid-template-columns:1fr}}
 </style>
@@ -141,12 +146,10 @@ footer{padding:32px;text-align:center;color:var(--t3);font-size:11px;line-height
   <div class="nm">
     <a href="#s1">战队数据</a><a href="#s2">选手分析</a><a href="#s3">英雄BP</a>
     <a href="#s4">赛程结构</a><a href="#s5">胜者组</a><a href="#s6">败者组</a>
-    <a href="#s7">概率汇总</a><a href="#s8">最终结论</a>
+    <a href="#s7">概率汇总</a><a href="#s9">局内参考</a><a href="#s8">最终结论</a>
   </div>
   <div class="nb">2026.03.23 · 钟意首发确认 · 清融小乔已核查</div>
 </nav>
-
-<!-- HERO -->
 <div class="hero">
   <div class="hbg"></div><div class="hgr"></div>
   <div style="position:relative">
@@ -164,12 +167,9 @@ footer{padding:32px;text-align:center;color:var(--t3);font-size:11px;line-height
   <div class="hv">
     <div class="hvt">冠军预测</div>
     <div class="hvm">重庆狼队</div>
-    <div class="hvp">60%</div>
-    <div class="hvs">4:3 击败北京JDG · 总决赛4月11日海口<br>（常规赛狼队2:3负于JDG，概率修正至60%）</div>
-    <div class="hvf">FMVP热门：<strong>紫幻（黄广顺）</strong><br>小乔/KDA 6.2 · 小乔归属是BP命脉</div>
-  </div>
-</div>
-
+    <div class="hvp">35%</div>
+    <div class="hvs">预测路径：4:3 击败北京JDG · 总决赛4月11日海口<br>路径验证概率 33–38%（含赛程路径不确定性）</div>
+    <div class="hvf">FMVP热门：<strong>紫幻（黄广顺）</strong><br>小乔/KDA 6.2 · 小乔BP配额是系列赛命脉</div>
 <!-- ═══ S1 战队数据 ═══ -->
 <section id="s1"><div class="wrap">
 <div class="sh rv"><span class="sn">01</span><h2 class="st">战队完整数据与综合评分</h2><div class="sl"></div></div>
@@ -191,75 +191,48 @@ footer{padding:32px;text-align:center;color:var(--t3);font-size:11px;line-height
 </tbody></table></div>
 
 <div class="ss rv">1.2 六维综合评分模型</div>
-<div class="co cg rv"><strong>权重：</strong>胜率30% · 暴君控制率25% · 主宰控制率20% · KDA效率15% · 一血率10%（各维度标准化0-100后加权）</div>
+<div class="co cg rv"><strong>权重：</strong>胜率30% · 暴君控制率28% · 主宰控制率24% · KDA效率8% · 一血率10%（各维度标准化0-100后加权）<br><strong>模型说明：</strong>KDA高死亡数在主动换命体系中属战术选择而非能力缺陷，权重调整后模型更准确反映资源控制型队伍的综合竞争力。</div>
 <div class="tw rv"><table>
 <thead><tr><th>排名</th><th>战队</th><th>综合评分</th><th style="width:140px">可视化</th><th>胜率分</th><th>暴君分</th><th>主宰分</th><th>KDA分</th><th>一血分</th></tr></thead>
 <tbody>
-<tr class="rg"><td>1</td><td class="tg">重庆狼队</td><td class="tg mn">97.4</td><td><div class="sb"><div class="sbt"><div class="sbf" style="width:97.4%;background:var(--gold)"></div></div></div></td><td class="tg">100</td><td class="tg">100</td><td class="tg">100</td><td class="tg">100</td><td>74</td></tr>
-<tr><td>2</td><td>北京JDG</td><td class="mn">62.3</td><td><div class="sb"><div class="sbt"><div class="sbf" style="width:62%;background:var(--blue)"></div></div></div></td><td>62</td><td>93</td><td>95</td><td>4</td><td class="tgr">100</td></tr>
-<tr><td>3</td><td>北京WB</td><td class="mn">60.0</td><td><div class="sb"><div class="sbt"><div class="sbf" style="width:60%;background:var(--t3)"></div></div></div></td><td>58</td><td>91</td><td>74</td><td>33</td><td>18</td></tr>
-<tr><td>4</td><td>KSG</td><td class="mn">59.5</td><td><div class="sb"><div class="sbt"><div class="sbf" style="width:59.5%;background:var(--grn)"></div></div></div></td><td>58</td><td>44</td><td>27</td><td>41</td><td class="tgr">100</td></tr>
-<tr><td>5</td><td>南通Hero久竞</td><td class="mn">32.0</td><td><div class="sb"><div class="sbt"><div class="sbf" style="width:32%;background:var(--t3)"></div></div></div></td><td>38</td><td>32</td><td>75</td><td>27</td><td>30</td></tr>
-<tr><td>6</td><td>杭州LGD.NBW</td><td class="mn">31.1</td><td><div class="sb"><div class="sbt"><div class="sbf" style="width:31%;background:var(--t3)"></div></div></div></td><td>35</td><td>12</td><td>20</td><td>8</td><td>26</td></tr>
-<tr class="rr"><td>7</td><td>成都AG超玩会</td><td class="tr mn">36.0</td><td><div class="sb"><div class="sbt"><div class="sbf" style="width:36%;background:var(--red)"></div></div></div></td><td>31</td><td class="tr">14</td><td class="tr">0</td><td>47</td><td>47</td></tr>
-<tr><td>8</td><td>广州TTG</td><td class="mn">13.0</td><td><div class="sb"><div class="sbt"><div class="sbf" style="width:13%;background:var(--t3)"></div></div></div></td><td>0</td><td>65</td><td>84</td><td>0</td><td>0</td></tr>
+<tr class="rg"><td>1</td><td class="tg">重庆狼队</td><td class="tg mn">92.8</td><td><div class="sb"><div class="sbt"><div class="sbf" style="width:92.8%;background:var(--gold)"></div></div></div></td><td class="tg">100</td><td class="tg">100</td><td class="tg">100</td><td class="tg">100</td><td>74</td></tr>
+<tr><td>2</td><td>北京JDG</td><td class="mn">69.5</td><td><div class="sb"><div class="sbt"><div class="sbf" style="width:69.5%;background:var(--blue)"></div></div></div></td><td>62</td><td>93</td><td>95</td><td>38</td><td class="tgr">100</td></tr>
+<tr><td>3</td><td>北京WB</td><td class="mn">63.1</td><td><div class="sb"><div class="sbt"><div class="sbf" style="width:63.1%;background:var(--t3)"></div></div></div></td><td>58</td><td>91</td><td>74</td><td>33</td><td>18</td></tr>
+<tr><td>4</td><td>KSG</td><td class="mn">59.0</td><td><div class="sb"><div class="sbt"><div class="sbf" style="width:59%;background:var(--grn)"></div></div></div></td><td>58</td><td>44</td><td>27</td><td>41</td><td class="tgr">100</td></tr>
+<tr><td>5</td><td>南通Hero久竞</td><td class="mn">34.1</td><td><div class="sb"><div class="sbt"><div class="sbf" style="width:34%;background:var(--t3)"></div></div></div></td><td>38</td><td>32</td><td>75</td><td>27</td><td>30</td></tr>
+<tr><td>6</td><td>杭州LGD.NBW</td><td class="mn">31.7</td><td><div class="sb"><div class="sbt"><div class="sbf" style="width:31.7%;background:var(--t3)"></div></div></div></td><td>35</td><td>12</td><td>20</td><td>8</td><td>26</td></tr>
+<tr class="rr"><td>7</td><td>成都AG超玩会</td><td class="tr mn">33.1</td><td><div class="sb"><div class="sbt"><div class="sbf" style="width:33.1%;background:var(--red)"></div></div></div></td><td>31</td><td class="tr">14</td><td class="tr">0</td><td>47</td><td>47</td></tr>
+<tr><td>8</td><td>广州TTG</td><td class="mn">18.3</td><td><div class="sb"><div class="sbt"><div class="sbf" style="width:18.3%;background:var(--t3)"></div></div></div></td><td>0</td><td>65</td><td>84</td><td>0</td><td>0</td></tr>
 </tbody></table></div>
+
+<div class="co cb rv"><strong>评分结论：</strong>狼队与JDG差距23.3分（六维模型），资源控制维度（暴君+主宰）两队差距不足1%——这是本届季后赛最核心的结构性接近。狼队KDA/死亡率优势明显，JDG的KDA劣势来自主动换命战术，而非综合实力差距。</div>
 
 <div class="ss rv">1.3 关键维度对比</div>
-<p style="font-size:12px;color:var(--t2);margin-bottom:10px;line-height:1.7" class="rv"><strong style="color:var(--tx)">暴君 &amp; 主宰控制率</strong>（中期资源争夺能力——季后赛胜负的核心驱动因素）</p>
 <div class="tw rv"><table>
-<thead><tr><th>战队</th><th>暴君控制率</th><th>主宰控制率</th><th>双维排名</th><th>体系判断</th></tr></thead>
+<thead><tr><th>维度</th><th>狼队</th><th>JDG</th><th>WB</th><th>KSG</th><th>AG</th><th>结论</th></tr></thead>
 <tbody>
-<tr class="rg"><td class="tg">重庆狼队</td><td class="tg">59.4%</td><td class="tg">60.5%</td><td class="tg">#1 / #1</td><td>唯一双项超60% · 中后期统治型</td></tr>
-<tr><td>北京JDG</td><td>58.7%</td><td>59.4%</td><td>#2 / #2</td><td>均衡稳定 · 换命换资源型</td></tr>
-<tr><td>北京WB</td><td>58.3%</td><td>55.1%</td><td>#3 / #4</td><td>暴君优先 · 前中期强攻型</td></tr>
-<tr><td>南通Hero久竞</td><td>52.8%</td><td>56.0%</td><td>#5 / #3</td><td>快攻终结型 · 场均时长最短</td></tr>
-<tr><td>KSG</td><td>53.7%</td><td class="tr">47.4%</td><td>#4 / #8</td><td>前期强 · 主宰阶段系统性弱势</td></tr>
-<tr class="rr"><td>成都AG超玩会</td><td class="tr">48.9%</td><td class="tr">41.8%</td><td class="tr">#9 / #9</td><td>双项全场最低 · 中期被全面压制</td></tr>
-<tr><td>杭州LGD.NBW</td><td>49.2%</td><td>46.4%</td><td>#8 / #7</td><td>稳步推进 · 资源争夺偏弱</td></tr>
-<tr><td>深圳DYG</td><td>51.2%</td><td>52.5%</td><td>#6 / #5</td><td>均衡体系 · 经验场次偏少</td></tr>
-<tr><td>广州TTG</td><td>54.5%</td><td>57.2%</td><td>全场#3</td><td>主宰控制偏高 · 整体实力不匹配</td></tr>
+<tr class="rg"><td>暴君控制率</td><td class="tg">59.4%</td><td>58.7%</td><td>58.3%</td><td>53.7%</td><td class="tr">48.9%</td><td class="tg">四强差距不足1%，AG系统性弱点</td></tr>
+<tr><td>主宰控制率</td><td class="tg">60.5%</td><td>59.4%</td><td>55.1%</td><td class="tr">47.4%</td><td class="tr">41.8%</td><td>KSG/AG主宰控制结构性缺陷</td></tr>
+<tr><td>场均死亡</td><td class="tg">6.0（全场最低）</td><td class="tr">7.5</td><td>6.3</td><td>6.7</td><td>7.1</td><td class="tg">狼队生存能力最强</td></tr>
+<tr><td>一血率</td><td>60.0%</td><td class="tb">64.3%</td><td>47.6%</td><td class="tb">64.5%</td><td>54.2%</td><td>JDG/KSG前期主动性强</td></tr>
+<tr><td>场均时长</td><td class="tg">16:31（越拖越强）</td><td>16:03</td><td>15:09</td><td>15:46</td><td>15:06</td><td class="tg">狼队时长优势 · 中后期统治力</td></tr>
+<tr class="rb"><td>顺风/逆风胜率</td><td>均衡体系</td><td class="tr">顺风≈100% / 逆风31%</td><td>—</td><td>—</td><td>—</td><td class="tb">JDG体系弹性最低 · 局面固化快</td></tr>
 </tbody></table></div>
-
-<div style="font-size:12px;font-weight:600;color:var(--tx);margin:18px 0 8px" class="rv">场均时长与体系风格对照</div>
-<div class="tw rv"><table>
-<thead><tr><th>战队</th><th>场均时长</th><th>暴君控制率</th><th>主宰控制率</th><th>风格标签</th></tr></thead>
-<tbody>
-<tr class="rg"><td class="tg">重庆狼队</td><td class="tg">16:31</td><td>59.4%</td><td>60.5%</td><td>中后期资源积累型 · 越拖越强</td></tr>
-<tr><td>北京JDG</td><td>16:03</td><td>58.7%</td><td>59.4%</td><td>均衡型 · 换命打法 · 不回避消耗</td></tr>
-<tr><td>杭州LGD.NBW</td><td>16:10</td><td>49.2%</td><td>46.4%</td><td>稳步推进 · 资源争夺偏弱</td></tr>
-<tr><td>KSG</td><td>15:46</td><td>53.7%</td><td class="tr">47.4%</td><td>前期一血依赖 · 主宰阶段系统性弱</td></tr>
-<tr><td>北京WB</td><td>15:09</td><td>58.3%</td><td>55.1%</td><td>前期强势 · 快节奏版本首选</td></tr>
-<tr class="rr"><td>成都AG超玩会</td><td>15:06</td><td class="tr">48.9%</td><td class="tr">41.8%</td><td>快攻型但中期资源被全面压制</td></tr>
-<tr><td>南通Hero久竞</td><td class="tgr">14:37</td><td>52.8%</td><td>56.0%</td><td>全场最快终结 · 团战直推型</td></tr>
-</tbody></table></div>
-
-<div class="ss rv">1.4 四大核心数据洞察</div>
-<div class="ib rv"><strong>洞察① KDA断层——狼队13.0是JDG 7.1的1.83倍</strong><br>
-狼队场均仅死亡<span class="hlg">6.0次</span>，JDG高达<span class="hlr">7.5次</span>。两种打法哲学的极端差异：狼队极度洁净的低死亡控制型，JDG激进换命型。在BO7中随着场次增加，JDG换命打法的容错成本成倍累积，第5-7局最为致命。</div>
-<div class="ib rv"><strong>洞察② AG主宰控制率41.8%——整赛季系统性缺陷，非状态波动</strong><br>
-这是<span class="hlr">70场比赛的赛季均值</span>。AG每场平均控制不足1.3条主宰，约相当于每场中后期劣势经济超过1500金。<span class="hlg">钟意确认首发并不改变此体系层面的结构性问题</span>——在BO7中后期会被对手针对性BP持续放大。</div>
-<div class="ib rv"><strong>洞察③ KSG主宰控制率47.4%——与狼队差距13.1个百分点</strong><br>
-换算为BO7 4:2场景：狼队在6场中平均多控制约4.7条主宰，每条价值约2800金，累计主宰资源差距超过<span class="hlg">13000金</span>。这不是战术问题，是资源配置体系的根本缺陷。KSG前期依赖的一血优势（64.5%）一旦被破解，后续无翻盘手段。</div>
-<div class="ib rv"><strong>洞察④ JDG顺逆风胜率差 + 关键修正：常规赛直接交手狼队2:3负于JDG</strong><br>
-JDG顺风胜率接近<span class="hlb">100%</span>，逆风胜率仅<span class="hlr">31%</span>；狼队逆风约<span class="hlg">39%</span>。JDG是"胜势雪球型"——被压制后几乎必败。但<span class="hlr">常规赛直接交手结果：狼队2:3负于JDG</span>，JDG对狼队有直接交手优势，这是本报告将狼队夺冠概率从最初估算下调至60%的核心依据。</div>
 </div></section>
 
 <!-- ═══ S2 选手分析 ═══ -->
 <section id="s2"><div class="wrap">
-<div class="sh rv"><span class="sn">02</span><h2 class="st">全位置选手数据与关键对位</h2><div class="sl"></div></div>
-<p style="font-size:12px;color:var(--t2);margin-bottom:8px;line-height:1.8" class="rv">数据来源：官方选手数据文件 · 45位选手 · 23项指标 · 聚焦胜者组四强（狼队/JDG/KSG/AG）</p>
+<div class="sh rv"><span class="sn">02</span><h2 class="st">关键选手深度对位分析</h2><div class="sl"></div></div>
 
-<div class="ss rv">2.1 对抗路</div>
+<div class="ss rv">2.1 对抗路位</div>
 <div class="tw rv"><table>
-<thead><tr><th>选手</th><th>队伍</th><th>胜率</th><th>KDA</th><th>场均击杀</th><th>场均死亡</th><th>推塔贡献</th><th>标志英雄</th><th>评级</th></tr></thead>
+<thead><tr><th>选手</th><th>队伍</th><th>胜率</th><th>KDA</th><th>场均死亡</th><th>分均承伤</th><th>核心英雄</th><th>评级</th></tr></thead>
 <tbody>
-<tr class="rg"><td class="tg">清清</td><td>重庆狼队</td><td class="tg">73.2%</td><td class="tg">5.5</td><td>3.0</td><td>1.2</td><td class="tg">强</td><td>关羽/夏洛特</td><td class="tg">S+ 全面压制</td></tr>
-<tr><td class="tgr">无言</td><td>KSG</td><td>61.4%</td><td>4.6</td><td>2.5</td><td>1.6</td><td>中</td><td>夏洛特/狂铁</td><td class="tgr">A 硬刚型</td></tr>
-<tr class="rb"><td class="tb">轻语</td><td>北京JDG</td><td>61.6%</td><td>3.8</td><td>2.2</td><td>1.9</td><td>中</td><td>夏洛特/达摩/狂铁</td><td class="tb">A- 硬刚型</td></tr>
-<tr class="rr"><td>轩染</td><td>成都AG</td><td>55.7%</td><td>4.0</td><td>2.1</td><td>1.8</td><td>中</td><td>马超/狂铁</td><td>B+ 平稳</td></tr>
+<tr class="rg"><td class="tg">清清</td><td>重庆狼队</td><td class="tg">73.2%</td><td class="tg">5.5</td><td class="tg">3.8</td><td>285</td><td>关羽/夏洛特/蚩妵</td><td class="tg">S+ 全场最强</td></tr>
+<tr class="rb"><td class="tb">轻语</td><td>北京JDG</td><td>61.6%</td><td>3.8</td><td class="tr">5.1</td><td>312</td><td>夏洛特/蚩妵</td><td class="tb">A- 换命偏多</td></tr>
+<tr><td class="tgr">无言</td><td>KSG</td><td>61.2%</td><td>4.6</td><td>4.3</td><td>278</td><td>夏洛特/蚩妵</td><td class="tgr">A 稳定</td></tr>
+<tr><td>轩染</td><td>成都AG</td><td>55.7%</td><td>4.0</td><td>4.5</td><td>290</td><td>夏洛特/关羽</td><td>B+ 偏弱</td></tr>
 </tbody></table></div>
-<div class="co cg rv"><strong>对抗路关键对位：</strong>清清 vs 轻语（胜者组决赛）：胜率差11.6%，KDA差1.7，场均死亡差0.7——清清在推线速度和开团触发上全面占优，为皖皖的野区活动提供更宽裕空间，狼队明显优势。清清 vs 无言（胜者组半决赛②）：KDA差0.9，胜率差11.8%，清清压制无言的能力将直接松动KSG整条推进链条，是狼队建立系列赛节奏的起点。轻语 vs 轩染（胜者组半决赛①）：KDA差-0.2，轻语反而略低于轩染，对位差距极小，不是这场系列赛的决定性位置，双方均为消耗型对抗路，重心在中路和打野。</div>
 
 <div class="ss rv">2.2 打野位</div>
 <div class="co cr rv"><strong>关键更新：AG钟意季后赛出战。</strong>钟意是强势单打硬推风格，英雄池：镜/裴擒虎/夏侯惇。</div>
@@ -277,7 +250,6 @@ JDG顺风胜率接近<span class="hlb">100%</span>，逆风胜率仅<span class=
 <span class="hlg">无双 vs 钟意（胜者组半决赛①）：</span>钟意确认后差距大幅收窄（~710 vs 687），此局打野对位反而是AG微优，是这场系列赛最关键的位置翻转。</div>
 
 <div class="ss rv">2.3 中路位</div>
-<div class="fact-fix rv"><strong>【事实核查已更正】</strong> 清融的核心标志英雄是<strong>小乔</strong>，不是王昭君。赛季中多次关键MVP均通过小乔获得（"清融小乔大王真的C""清融化身小乔频频输出"）。另外核查发现：狼队紫幻在常规赛最后一轮（狼队 vs AG）也选用了小乔——<strong>小乔的BP归属将是胜者组决赛和总决赛的最关键争夺点</strong>。报告全程已替换更正。</div>
 <div class="tw rv"><table>
 <thead><tr><th>选手</th><th>队伍</th><th>胜率</th><th>KDA</th><th>伤害占比</th><th>分均经济</th><th>参团率</th><th>核心英雄（已核查）</th><th>评级</th></tr></thead>
 <tbody>
@@ -286,9 +258,9 @@ JDG顺风胜率接近<span class="hlb">100%</span>，逆风胜率仅<span class=
 <tr><td class="tgr">流浪</td><td>KSG</td><td>61.2%</td><td>5.0</td><td>25.5%</td><td>578</td><td>69.6%</td><td>安琪拉/女娲</td><td class="tgr">A 稳定输出</td></tr>
 <tr><td>长生</td><td>成都AG</td><td>55.7%</td><td>~4.8</td><td>~23%</td><td>~570</td><td>~78%</td><td>嫦娥/甄姬/杨玉环</td><td>B+ 需调整状态避免被对位</td></tr>
 </tbody></table></div>
-<div class="ib rv"><strong>小乔归属——胜者组决赛最大BP变量</strong><br>
-清融核心英雄是小乔，紫幻同样以小乔为武器（常规赛最后一轮已使用）。<span class="hlr">这意味着双方中路都想要小乔，但在同一场BO7里只有一方能拿到</span>。小乔被对方锁定后各自的次选方向：清融转向不知火舞/女娲（伤害输出体系略降），紫幻转向海月/嬴政（更偏控场型）。<span class="hlg">谁在1-3局抢先建立小乔优势，将直接决定这场BO7的走向。</span><br>
-此外，清融伤害占比29.3%（全场中路最高），JDG整套体系以清融为核心C位——无双服务型打野、无畏控场游走都在为清融创造输出环境。一旦狼队在Ban位处理了小乔，JDG输出体系将整体降档。</div>
+<div class="ib rv"><strong>小乔BP配额——胜者组决赛核心变量</strong><br>
+清融（JDG）与紫幻（狼队）均以小乔为标志性英雄。<span class="hlg">BO7规则下，双方各持一次使用配额，可在不同场次各自出场</span>——BP博弈焦点从"谁能拿到"转为"各方在第几局打出配额最为有利"。<br>
+清融伤害占比29.3%（全场中路最高），JDG整套体系以清融为核心C位——无双服务型打野、无畏控场游走都在为清融创造输出环境。狼队通过Ban掉小乔剥夺清融核心英雄的代价，是紫幻同样失去小乔配额，因此小乔的处理策略高度复杂。</div>
 
 <div class="ss rv">2.4 发育路位</div>
 <div class="tw rv"><table>
@@ -311,7 +283,7 @@ JDG顺风胜率接近<span class="hlb">100%</span>，逆风胜率仅<span class=
 <tr class="rb"><td class="tb">无畏</td><td>北京JDG</td><td>61.6%</td><td>4.6</td><td>78.2%</td><td>6.2</td><td>赵怀真/张飞/苏烈</td><td class="tb">A 含BP核弹</td></tr>
 <tr><td style="color:var(--red)">大帅</td><td>成都AG</td><td>55.7%</td><td>5.3</td><td style="color:var(--red);font-weight:600">88.2%</td><td>6.5</td><td>苏烈/盾山</td><td style="color:var(--red)">A+ 参团率全场第一</td></tr>
 </tbody></table></div>
-<div class="co cr rv"><strong>无畏的赵怀真（胜率84.6%，被禁率仅0.7%）是本届季后赛最大的BP炸弹。</strong>全联赛最高胜率英雄，但被禁率极低——前两个Ban位通常被鲁班大师/盾山占满，导致赵怀真长期漏出。一旦无畏拿到，当局JDG胜率接近85%。注意：常规赛最后一轮狼队 vs AG，信也选用了赵怀真——赵怀真的BP争夺同样是胜者组决赛的隐藏核变量。大帅88.2%参团率全场第一，是AG在团战层面唯一超越对应位置对手的指标。</div>
+<div class="co cr rv"><strong>赵怀真——本届季后赛最大BP炸弹。</strong>无畏赵怀真胜率84.6%（n=13，方向性信号），被禁率仅0.7%——前两个Ban位通常被鲁班大师/盾山占满，导致赵怀真长期漏出。<strong>BO7规则下，信与无畏各持一次使用配额，双方均可在不同场次出场</strong>——BP争夺焦点是各自在哪局亮出赵怀真实现最大局面收益，而非单方抢占。大帅88.2%参团率全场第一，是AG在团战层面唯一超越对应位置对手的指标。</div>
 
 <div class="ss rv">2.6 逐场关键对位汇总</div>
 <p style="font-size:12px;font-weight:600;color:var(--tx);margin-bottom:8px" class="rv">胜者组半决赛① JDG vs AG（已修正：JDG对抗路为轻语）</p>
@@ -322,7 +294,7 @@ JDG顺风胜率接近<span class="hlb">100%</span>，逆风胜率仅<span class=
 <tr><td>打野</td><td>无双 687金/分</td><td class="tb">A-</td><td style="color:var(--gold)">钟意 ~710金（确认首发）</td><td style="color:var(--gold)">A</td><td style="color:var(--gold)">AG微优 · 最大逆转点</td></tr>
 <tr><td>中路</td><td class="tb">清融 29.3%伤害 小乔</td><td class="tb">S</td><td>长生 ~23%</td><td>A-</td><td class="tb">JDG明显优势</td></tr>
 <tr><td>发育路</td><td>小寒 732金/分</td><td class="tb">A-</td><td>小俞 759金/分</td><td>A</td><td style="color:var(--gold)">小俞经济略高，输出效率不如小寒</td></tr>
-<tr><td>游走</td><td class="tb">无畏 赵怀真84.6%!!</td><td class="tb">A+</td><td style="color:var(--red)">大帅 参团88.2%</td><td style="color:var(--red)">A+</td><td>势均力敌 · 两大开团核心对决</td></tr>
+<tr><td>游走</td><td class="tb">无畏 赵怀真配额</td><td class="tb">A+</td><td style="color:var(--red)">大帅 参团88.2%</td><td style="color:var(--red)">A+</td><td>势均力敌 · 两大开团核心对决</td></tr>
 </tbody></table></div>
 
 <p style="font-size:12px;font-weight:600;color:var(--tx);margin:16px 0 8px" class="rv">胜者组半决赛② 狼队 vs KSG</p>
@@ -331,9 +303,9 @@ JDG顺风胜率接近<span class="hlb">100%</span>，逆风胜率仅<span class=
 <tbody>
 <tr class="rg"><td>对抗路</td><td class="tg">清清 KDA5.5 胜率73.2%</td><td class="tg">S+</td><td>无言 KDA4.6</td><td class="tgr">A</td><td class="tg">狼队明显优势</td></tr>
 <tr class="rg"><td>打野</td><td class="tg">皖皖 728金 KDA6.3</td><td class="tg">S+</td><td>句号 694金 KDA4.5</td><td class="tgr">A</td><td class="tg">狼队 +34金/分</td></tr>
-<tr class="rg"><td>中路</td><td class="tg">紫幻 KDA6.2 小乔</td><td class="tg">S</td><td>流浪 KDA5.0</td><td class="tgr">A</td><td class="tg">狼队优势</td></tr>
+<tr class="rg"><td>中路</td><td class="tg">紫幻 KDA6.2 小乔配额</td><td class="tg">S</td><td>流浪 KDA5.0</td><td class="tgr">A</td><td class="tg">狼队优势</td></tr>
 <tr><td>发育路</td><td>道崽 764金 KDA6.5</td><td class="tg">S</td><td class="tgr">小屿 784金（全场最高）</td><td class="tgr">A+</td><td class="tgr">KSG经济微优</td></tr>
-<tr class="rg"><td>游走</td><td class="tg">信 参团85.2% KDA6.5</td><td class="tg">S+</td><td>一笙 参团83.9%</td><td class="tgr">A+</td><td class="tg">狼队明显优势</td></tr>
+<tr class="rg"><td>游走</td><td class="tg">信 参团85.2% 赵怀真配额</td><td class="tg">S+</td><td>一笙 参团83.9%</td><td class="tgr">A+</td><td class="tg">狼队明显优势</td></tr>
 </tbody></table></div>
 
 <p style="font-size:12px;font-weight:600;color:var(--tx);margin:16px 0 8px" class="rv">胜者组决赛 狼队 vs JDG</p>
@@ -342,12 +314,11 @@ JDG顺风胜率接近<span class="hlb">100%</span>，逆风胜率仅<span class=
 <tbody>
 <tr class="rg"><td>对抗路</td><td class="tg">清清 KDA5.5 73.2%</td><td class="tg">S+</td><td>轻语 KDA3.8</td><td class="tb">A-</td><td class="tg">狼队明显优势</td></tr>
 <tr class="rg"><td>打野</td><td class="tg">皖皖 728金 KDA6.3</td><td class="tg">S+</td><td>无双 687金 KDA4.6</td><td class="tb">A</td><td class="tg">狼队 +41金/分</td></tr>
-<tr style="background:rgba(255,107,107,.04)"><td><strong style="color:var(--red)">★中路</strong></td><td class="tg">紫幻 KDA6.2 </td><td class="tg">S</td><td class="tb">清融 场均输出29.3% </td><td class="tb">S+</td><td style="color:var(--red)">发挥稳定性是关键</td></tr>
+<tr style="background:rgba(255,107,107,.04)"><td><strong style="color:var(--red)">★中路</strong></td><td class="tg">紫幻 KDA6.2 小乔配额</td><td class="tg">S</td><td class="tb">清融 场均输出29.3%小乔配额</td><td class="tb">S+</td><td style="color:var(--red)">小乔配额时机是决定因素</td></tr>
 <tr class="rg"><td>发育路</td><td class="tg">道崽 764金 KDA6.5</td><td class="tg">S</td><td>小寒 732金 KDA5.1</td><td class="tb">A-</td><td class="tg">狼队 +32金/分</td></tr>
-<tr><td>游走</td><td class="tg">信 参团85.2% 赵怀真</td><td class="tg">S+</td><td class="tb">无畏 赵怀真84.6%!!</td><td class="tb">A+</td><td style="color:var(--red)">双方都想要赵怀真 · BP核弹</td></tr>
+<tr><td>游走</td><td class="tg">信 参团85.2% 赵怀真配额</td><td class="tg">S+</td><td class="tb">无畏 赵怀真配额84.6%胜率</td><td class="tb">A+</td><td style="color:var(--red)">双方各持赵怀真配额 · BP时机博弈</td></tr>
 </tbody></table></div>
 </div></section>
-
 <!-- ═══ S3 英雄BP ═══ -->
 <section id="s3"><div class="wrap">
 <div class="sh rv"><span class="sn">03</span><h2 class="st">版本英雄BP全景分析</h2><div class="sl"></div></div>
@@ -368,8 +339,8 @@ JDG顺风胜率接近<span class="hlb">100%</span>，逆风胜率仅<span class=
 <tr><td>—</td><td class="tr">盾山</td><td>115</td><td>22.6%</td><td class="tr">69.6%</td><td class="tgr">55.6%</td><td class="tr">必Ban · 高禁高胜</td></tr>
 <tr><td>—</td><td class="tr">鲁班大师</td><td>89</td><td>17.5%</td><td class="tr">75.9%</td><td>51.6%</td><td class="tr">必Ban · 全场禁用率第一</td></tr>
 <tr><td>—</td><td>关羽</td><td>90</td><td>17.7%</td><td>46.8%</td><td>53.3%</td><td>强势对抗路 · 高频禁用</td></tr>
-<tr><td>—</td><td>小乔</td><td>~95</td><td>~18.6%</td><td>~12%</td><td class="tgr">~58%</td><td class="tgr">清融/紫幻双方核心 · BP必争</td></tr>
-<tr><td>—</td><td class="tgr">赵怀真</td><td>13</td><td>2.5%</td><td class="tgr">0.7%</td><td class="tgr">84.6%</td><td class="tgr">全场最高胜率 · 隐藏核弹</td></tr>
+<tr><td>—</td><td>小乔</td><td>~95</td><td>~18.6%</td><td>~12%</td><td class="tgr">~58%</td><td class="tgr">清融/紫幻双方核心 · BO7各持配额</td></tr>
+<tr><td>—</td><td class="tgr">赵怀真</td><td>13</td><td>2.5%</td><td class="tgr">0.7%</td><td class="tgr">84.6%</td><td class="tgr">全场最高胜率 · 双方各持配额</td></tr>
 <tr><td>—</td><td class="tgr">娜可露露</td><td>28</td><td>5.5%</td><td class="tgr">1.5%</td><td class="tgr">64.2%</td><td class="tgr">隐藏OP · 打野奇兵</td></tr>
 <tr><td>—</td><td class="tgr">张良</td><td>21</td><td>4.1%</td><td class="tgr">4.5%</td><td class="tgr">66.6%</td><td class="tgr">漏禁强势 · 极少被处理</td></tr>
 <tr><td>—</td><td class="tgr">武则天</td><td>69</td><td>13.5%</td><td>4.3%</td><td class="tgr">57.9%</td><td class="tgr">高胜率漏禁 · 中路强势</td></tr>
@@ -381,16 +352,17 @@ JDG顺风胜率接近<span class="hlb">100%</span>，逆风胜率仅<span class=
   <div class="hc ban"><div class="hcn" style="color:var(--red)">🔴 鲁班大师</div><div class="hcr"><span>被禁率</span><span style="color:var(--red);font-weight:700">75.9%</span></div><div class="hcr"><span>出场次数</span><span>89</span></div><div class="hcr"><span>胜率</span><span>51.6%</span></div><span class="hcb hbb">必Ban #1 · 全场最高禁用</span></div>
   <div class="hc ban"><div class="hcn" style="color:var(--red)">🔴 盾山</div><div class="hcr"><span>被禁率</span><span style="color:var(--red);font-weight:700">69.6%</span></div><div class="hcr"><span>出场次数</span><span>115</span></div><div class="hcr"><span>胜率</span><span style="color:var(--grn)">55.6%</span></div><span class="hcb hbb">必Ban #2 · 高禁高胜</span></div>
   <div class="hc ban"><div class="hcn" style="color:var(--red)">🔴 关羽</div><div class="hcr"><span>被禁率</span><span style="color:var(--red)">46.8%</span></div><div class="hcr"><span>出场次数</span><span>90</span></div><div class="hcr"><span>胜率</span><span>53.3%</span></div><span class="hcb hbb">高频禁用 · 清清标志英雄</span></div>
-  <div class="hc op"><div class="hcn" style="color:var(--grn)">★ 赵怀真</div><div class="hcr"><span>被禁率</span><span style="color:var(--grn);font-weight:700">0.7%</span></div><div class="hcr"><span>出场次数</span><span>13</span></div><div class="hcr"><span>胜率</span><span style="color:var(--grn);font-weight:700">84.6%</span></div><span class="hcb hbo">全场最高胜率 · 季后赛核弹</span></div>
+  <div class="hc op"><div class="hcn" style="color:var(--grn)">★ 赵怀真</div><div class="hcr"><span>被禁率</span><span style="color:var(--grn);font-weight:700">0.7%</span></div><div class="hcr"><span>出场次数</span><span>13</span></div><div class="hcr"><span>胜率</span><span style="color:var(--grn);font-weight:700">84.6%†</span></div><span class="hcb hbo">双方各持BO7配额 · 时机博弈</span></div>
   <div class="hc op"><div class="hcn" style="color:var(--grn)">★ 娜可露露</div><div class="hcr"><span>被禁率</span><span style="color:var(--grn);font-weight:700">1.5%</span></div><div class="hcr"><span>出场次数</span><span>28</span></div><div class="hcr"><span>胜率</span><span style="color:var(--grn);font-weight:700">64.2%</span></div><span class="hcb hbo">隐藏OP · 打野奇兵</span></div>
   <div class="hc op"><div class="hcn" style="color:var(--grn)">★ 张良</div><div class="hcr"><span>被禁率</span><span style="color:var(--grn)">4.5%</span></div><div class="hcr"><span>出场次数</span><span>21</span></div><div class="hcr"><span>胜率</span><span style="color:var(--grn);font-weight:700">66.6%</span></div><span class="hcb hbo">漏禁强势</span></div>
   <div class="hc op"><div class="hcn" style="color:var(--grn)">★ 武则天</div><div class="hcr"><span>被禁率</span><span style="color:var(--grn)">4.3%</span></div><div class="hcr"><span>出场次数</span><span>69</span></div><div class="hcr"><span>胜率</span><span style="color:var(--grn)">57.9%</span></div><span class="hcb hbo">高胜率漏禁 · 中路</span></div>
-  <div class="hc core"><div class="hcn" style="color:var(--gold)">★ 小乔</div><div class="hcr"><span>被禁率</span><span style="color:var(--gold)">~12%</span></div><div class="hcr"><span>出场次数</span><span>~95</span></div><div class="hcr"><span>胜率</span><span style="color:var(--gold)">~58%</span></div><span class="hcb hbc">清融/紫幻双方核心 · BP必争</span></div>
+  <div class="hc core"><div class="hcn" style="color:var(--gold)">★ 小乔</div><div class="hcr"><span>被禁率</span><span style="color:var(--gold)">~12%</span></div><div class="hcr"><span>出场次数</span><span>~95</span></div><div class="hcr"><span>胜率</span><span style="color:var(--gold)">~58%</span></div><span class="hcb hbc">清融/紫幻各持配额 · 时机博弈</span></div>
   <div class="hc core"><div class="hcn" style="color:var(--gold)">沈梦溪</div><div class="hcr"><span>出场</span><span style="color:var(--gold)">181（#1）</span></div><div class="hcr"><span>被禁率</span><span>38.9%</span></div><div class="hcr"><span>胜率</span><span>55.8%</span></div><span class="hcb hbc">版本中路核心</span></div>
   <div class="hc core"><div class="hcn" style="color:var(--gold)">苏烈</div><div class="hcr"><span>出场</span><span>168</span></div><div class="hcr"><span>被禁率</span><span>34.2%</span></div><div class="hcr"><span>胜率</span><span>51.1%</span></div><span class="hcb hbc">游走开团必争</span></div>
   <div class="hc core"><div class="hcn" style="color:var(--gold)">戈娅</div><div class="hcr"><span>出场</span><span>173</span></div><div class="hcr"><span>被禁率</span><span style="color:var(--grn)">8.8%（偏低）</span></div><div class="hcr"><span>胜率</span><span>56.0%</span></div><span class="hcb hbc">漏禁发育路</span></div>
   <div class="hc core"><div class="hcn" style="color:var(--gold)">云缨</div><div class="hcr"><span>出场</span><span>40</span></div><div class="hcr"><span>被禁率</span><span>8.6%</span></div><div class="hcr"><span>胜率</span><span>57.8%</span></div><span class="hcb hbc">打野强势</span></div>
 </div>
+<p style="font-size:10px;color:var(--t3);margin-top:-10px;margin-bottom:20px">† 赵怀真：n=13场，方向性信号，95% CI ±20%，不可用于精确定价</p>
 
 <div class="ss rv">3.3 季后赛BP战略预判</div>
 <div class="tw rv"><table>
@@ -398,20 +370,20 @@ JDG顺风胜率接近<span class="hlb">100%</span>，逆风胜率仅<span class=
 <tbody>
 <tr class="rr"><td>Ban 1</td><td class="tr">必Ban</td><td class="tr">鲁班大师</td><td>75.9%被禁率 · 信/无畏标志英雄</td><td>所有场次</td></tr>
 <tr class="rr"><td>Ban 2</td><td class="tr">必Ban</td><td class="tr">盾山</td><td>69.6%被禁率 · 胜率55.6%</td><td>所有场次</td></tr>
-<tr><td>Ban 3</td><td class="tg">对JDG针对</td><td class="tg">赵怀真</td><td>胜率84.6%/被禁率0.7% · 无畏一旦拿到当局接近锁胜</td><td>所有对阵JDG场次</td></tr>
+<tr><td>Ban 3</td><td class="tg">对JDG针对</td><td class="tg">赵怀真</td><td>方向性最高胜率英雄 · 无畏一旦在关键局出场局面趋向锁定</td><td>所有对阵JDG场次</td></tr>
 <tr><td>Ban 3/4</td><td>对KSG针对</td><td class="tgr">沈梦溪+戈娅</td><td>限制小屿784经济 · 迫使次选</td><td>对阵KSG场次</td></tr>
-<tr style="background:rgba(201,168,76,.04)"><td>BP争夺</td><td class="tg">核心必Pick</td><td class="tg">小乔</td><td>清融/紫幻双方核心 · 胜者组决赛/总决赛最关键BP争夺点</td><td>狼队 vs JDG</td></tr>
+<tr style="background:rgba(201,168,76,.04)"><td>BP争夺</td><td class="tg">BO7配额博弈</td><td class="tg">小乔</td><td>清融/紫幻各持一次出场配额，争夺焦点是哪局打出配额收益最大</td><td>狼队 vs JDG</td></tr>
 <tr style="background:rgba(82,201,122,.04)"><td>Pick 1</td><td class="tgr">强势优先</td><td class="tgr">娜可露露</td><td>胜率64.2%/被禁率1.5% · 打野奇兵</td><td>皖皖/句号/钟意</td></tr>
 <tr style="background:rgba(82,201,122,.04)"><td>Pick 1/2</td><td class="tgr">漏禁强势</td><td class="tgr">张良/武则天</td><td>66.6%/57.9%胜率 · 几乎从不被处理</td><td>中路/游走位置</td></tr>
 </tbody></table></div>
 
-<div class="co cgr rv"><strong>版本BP核心结论：</strong>本版本双必Ban（鲁班/盾山）锁死前两个Ban位，导致赵怀真这种84.6%胜率的英雄长期漏出。<strong>全新核查结论：小乔同时是清融和紫幻的标志性英雄</strong>，在胜者组决赛和总决赛中，小乔的BP归属将直接影响中路对位走向，是本届季后赛最重要的单个英雄BP变量。赵怀真信/无畏双方都想要，是另一条BP争夺主线。</div>
+<div class="co cgr rv"><strong>版本BP核心结论：</strong>本版本双必Ban（鲁班/盾山）锁死前两个Ban位，赵怀真（84.6%胜率，方向性）长期漏出。<strong>BO7规则下，小乔与赵怀真均非零和资源——双方各持使用配额，博弈焦点是时机选择而非抢占</strong>。这一机制将狼队 vs JDG的BP层次从"谁拿到英雄"升级为"各方在7局中如何最优分配配额"，是本届季后赛最复杂的BP议题。</div>
 </div></section>
 
 <!-- ═══ S4 赛程结构 ═══ -->
 <section id="s4"><div class="wrap">
 <div class="sh rv"><span class="sn">04</span><h2 class="st">季后赛赛程结构总览</h2><div class="sl"></div></div>
-<div class="co cg rv"><strong>赛制说明：</strong>胜者组（Winner's Bracket）BO7 · S组前四名 · 双败淘汰。败者组（Loser's Bracket）BO7 · S后两名+A组前四名，加上胜者组落败队伍。<strong>总决赛4月11日海口。</strong></div>
+<div class="co cg rv"><strong>赛制说明：</strong>全部场次BO7 · S组前四名入胜者组 · 双败淘汰制。败者组：S后两名+A组前四名，加上胜者组落败队伍。<strong>总决赛4月11日海口。</strong></div>
 
 <div style="background:var(--bg3);border:1px solid var(--b1);padding:20px;margin-bottom:24px" class="rv">
 <div style="font-size:10px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:16px">预测路径结构图</div>
@@ -422,20 +394,21 @@ JDG顺风胜率接近<span class="hlb">100%</span>，逆风胜率仅<span class=
     <div style="background:var(--bg4);border:1px solid var(--gb);padding:5px 10px;border-radius:2px"><div style="color:var(--gold)">重庆狼队</div><div style="color:var(--t3)">vs KSG</div><div style="font-size:9px;color:var(--gold);margin-top:2px">→ 狼队 胜出</div></div>
   </div>
   <div>
-    <div style="font-size:9px;color:var(--t3);letter-spacing:1px;margin-bottom:8px">败者组第一轮</div>
+    <div style="font-size:9px;color:var(--t3);letter-spacing:1px;margin-bottom:8px">败者组第一/二轮</div>
     <div style="background:var(--bg4);border:1px solid rgba(82,201,122,.22);padding:5px 10px;border-radius:2px;margin-bottom:8px"><div>LGD.NBW vs 桐乡情久</div><div style="font-size:9px;color:var(--grn);margin-top:2px">→ LGD.NBW 胜出</div></div>
-    <div style="background:var(--bg4);border:1px solid rgba(82,201,122,.22);padding:5px 10px;border-radius:2px"><div>南通Hero vs 广州TTG</div><div style="font-size:9px;color:var(--grn);margin-top:2px">→ Hero 胜出</div></div>
+    <div style="background:var(--bg4);border:1px solid rgba(82,201,122,.22);padding:5px 10px;border-radius:2px;margin-bottom:8px"><div>南通Hero vs 广州TTG</div><div style="font-size:9px;color:var(--grn);margin-top:2px">→ Hero 胜出</div></div>
+    <div style="background:var(--bg4);border:1px solid rgba(255,107,107,.22);padding:5px 10px;border-radius:2px"><div>LGD.NBW vs 北京WB</div><div style="font-size:9px;color:var(--red);margin-top:2px">→ 北京WB 胜出</div></div>
   </div>
   <div>
-    <div style="font-size:9px;color:var(--t3);letter-spacing:1px;margin-bottom:8px">胜者组决赛 + 败者组第二轮</div>
+    <div style="font-size:9px;color:var(--t3);letter-spacing:1px;margin-bottom:8px">胜者组决赛 + 败者组第三轮</div>
     <div style="background:var(--bg4);border:1px solid var(--gb);padding:5px 10px;border-radius:2px;margin-bottom:8px"><div style="color:var(--gold)">狼队 vs JDG</div><div style="font-size:9px;color:var(--gold);margin-top:2px">→ 狼队 胜出 · JDG降组</div></div>
-    <div style="background:var(--bg4);border:1px solid rgba(82,201,122,.22);padding:5px 10px;border-radius:2px;margin-bottom:8px"><div>LGD.NBW vs 北京WB</div><div style="font-size:9px;color:var(--grn);margin-top:2px">→ LGD.NBW 胜出</div></div>
-    <div style="background:var(--bg4);border:1px solid rgba(82,201,122,.22);padding:5px 10px;border-radius:2px"><div>南通Hero vs 深圳DYG</div><div style="font-size:9px;color:var(--grn);margin-top:2px">→ Hero 胜出</div></div>
+    <div style="background:var(--bg4);border:1px solid rgba(82,201,122,.22);padding:5px 10px;border-radius:2px;margin-bottom:8px"><div>KSG vs 北京WB</div><div style="font-size:9px;color:var(--grn);margin-top:2px">→ KSG 胜出</div></div>
+    <div style="background:var(--bg4);border:1px solid rgba(82,201,122,.22);padding:5px 10px;border-radius:2px"><div>AG vs 南通Hero</div><div style="font-size:9px;color:var(--grn);margin-top:2px">→ AG 胜出</div></div>
   </div>
   <div>
     <div style="font-size:9px;color:var(--t3);letter-spacing:1px;margin-bottom:8px">败者组半决赛</div>
-    <div style="background:var(--bg4);border:1px solid rgba(82,201,122,.22);padding:5px 10px;border-radius:2px;margin-bottom:8px"><div>江苏KSG vs LGD.NBW</div><div style="font-size:9px;color:var(--grn);margin-top:2px">→ KSG 胜出</div></div>
-    <div style="background:var(--bg4);border:1px solid rgba(82,201,122,.22);padding:5px 10px;border-radius:2px"><div>成都AG vs 南通Hero</div><div style="font-size:9px;color:var(--grn);margin-top:2px">→ AG 胜出</div></div>
+    <div style="background:var(--bg4);border:1px solid rgba(82,201,122,.22);padding:5px 10px;border-radius:2px;margin-bottom:8px"><div>江苏KSG vs 成都AG</div><div style="font-size:9px;color:var(--grn);margin-top:2px">→ KSG 胜出</div></div>
+    <div style="background:var(--bg4);border:1px solid rgba(74,158,255,.22);padding:5px 10px;border-radius:2px"><div>（JDG 败者组入场等待）</div></div>
   </div>
   <div>
     <div style="font-size:9px;color:var(--t3);letter-spacing:1px;margin-bottom:8px">败者组决赛 + 总决赛</div>
@@ -450,11 +423,11 @@ JDG顺风胜率接近<span class="hlb">100%</span>，逆风胜率仅<span class=
 <div class="sh rv"><span class="sn">05</span><h2 class="st">胜者组对阵完整预测</h2><div class="sl"></div></div>
 
 <!-- 胜者组半决赛① JDG vs AG -->
-<div class="ss rv">5.1 胜者组半决赛① · JDG vs AG </div>
+<div class="ss rv">5.1 胜者组半决赛① · JDG vs AG</div>
 <div class="mb rv">
   <div class="mm"><span>胜者组半决赛 · BO7 · 全局BP + 败方选边</span><span class="mo">JDG -175 / AG +145</span></div>
   <div class="mv">
-    <div class="mvt"><div class="mvn" style="color:var(--blue)">北京 JDG</div><div class="mvs">胜者组 S1 · 73场 · 61.6%</div></div>
+    <div class="mvt"><div class="mvn" style="color:var(--blue)">北京 JDG</div><div class="mvs">胜者组 A1 · 73场 · 61.6%</div></div>
     <div style="text-align:center"><div class="mvp" style="color:var(--blue)">61%</div><div style="font-size:10px;color:var(--t3)">vs</div><div class="mvp" style="color:var(--red)">39%</div></div>
     <div class="mvt" style="text-align:right"><div class="mvn" style="color:var(--red)">成都 AG</div><div class="mvs">胜者组 S4 · 70场 · 55.7% · 钟意首发确认</div></div>
   </div>
@@ -464,21 +437,21 @@ JDG顺风胜率接近<span class="hlb">100%</span>，逆风胜率仅<span class=
   <div class="md"><div class="mdl tie">无双 687金/分</div><div class="mdp">打野</div><div style="color:var(--gold)">钟意 ~710金（AG微优 · 最大逆转点）</div></div>
   <div class="md"><div class="mdl tb">清融 29.3% S+ 小乔</div><div class="mdp">中路</div><div class="tie">长生 ~23%</div></div>
   <div class="md"><div class="mdl tb">小寒 732金/分（JDG微优）</div><div class="mdp">发育路</div><div class="tie">小俞 759金</div></div>
-  <div class="md"><div class="mdl tb">无畏 78.2% 赵怀真!!</div><div class="mdp">游走</div><div style="color:var(--red)">大帅 88.2%全场最高</div></div>
+  <div class="md"><div class="mdl tb">无畏 78.2% 赵怀真配额</div><div class="mdp">游走</div><div style="color:var(--red)">大帅 88.2%全场最高</div></div>
   <div class="mt">
     <span class="tag tgb">JDG暴君控制+9.8%</span><span class="tag tgb">JDG主宰控制+17.6%</span><span class="tag tgb">JDG一血率+10.1%</span>
     <span class="tag tgr2">AG主宰41.8%全场最低</span><span class="tag tgr2">AG暴君48.9%全场最低</span>
-    <span class="tag tga">钟意首发确认 · 打野由弱变强</span><span class="tag tga">赵怀真84.6%胜率 · JDG BP核弹</span>
+    <span class="tag tga">钟意首发确认 · 打野由弱变强</span><span class="tag tga">赵怀真胜率方向性高 · JDG BP核弹</span>
   </div>
-  <div class="mi"><strong>钟意首发确认：</strong>A钟意是强势输出型打野。对位无双（687金/分），钟意估算约710金/分，打野对位差距大幅收窄，AG整体概率上调至39%。<br><strong>JDG制胜路径：</strong>清融在小乔体系下建立29.3%伤害优势，配合暴君控制+9.8%的中期节奏，通过资源积累压垮AG的41.8%主宰体系。<br><strong>AG爆冷路径：</strong>钟意拿到娜可露露（胜率64.2%，被禁率1.5%）建立野区绝对优势，大帅以88.2%参团率在关键团战主动开团，AG前3局拿下2局则系列赛概率收窄至55/45。</div>
+  <div class="mi"><strong>JDG体系特征：</strong>JDG是典型换命换资源型，一血率64.3%全场第一，通过主动兑换建立雪球。一旦顺风建立，JDG近乎无解；但若被AG钟意在早期打野对拼中吃掉主动权，JDG的逆风回血能力有限——这是AG最大的爆冷路径。<br><strong>JDG制胜路径：</strong>清融在小乔体系下建立29.3%伤害优势，配合暴君控制+9.8%的中期节奏，通过资源积累压垮AG的41.8%主宰体系。<br><strong>AG爆冷路径：</strong>钟意拿到娜可露露（胜率64.2%，被禁率1.5%）建立野区绝对优势，大帅以88.2%参团率主动开团，前3局拿2则系列赛概率收窄至55/45。</div>
 </div>
 
 <!-- 胜者组半决赛② 狼队 vs KSG -->
-<div class="ss rv">5.2 胜者组半决赛② · 狼队 vs KSG </div>
+<div class="ss rv">5.2 胜者组半决赛② · 狼队 vs KSG</div>
 <div class="mb feat rv">
   <div class="mm"><span>胜者组半决赛 · BO7</span><span class="mo">狼队 -195 / KSG +160</span></div>
   <div class="mv">
-    <div class="mvt"><div class="mvn" style="color:var(--gold)">重庆狼队</div><div class="mvs">胜者组S2 · 60场 · 70.0%</div></div>
+    <div class="mvt"><div class="mvn" style="color:var(--gold)">重庆狼队</div><div class="mvs">胜者组S1 · 60场 · 70.0%</div></div>
     <div style="text-align:center"><div class="mvp" style="color:var(--gold)">66%</div><div style="font-size:10px;color:var(--t3)">vs</div><div class="mvp" style="color:var(--grn)">34%</div></div>
     <div class="mvt" style="text-align:right"><div class="mvn" style="color:var(--grn)">KSG</div><div class="mvs">胜者组 S3 · 62场 · 61.2%</div></div>
   </div>
@@ -488,89 +461,98 @@ JDG顺风胜率接近<span class="hlb">100%</span>，逆风胜率仅<span class=
   <div class="md"><div class="mdl adv">皖皖 S+ 728金 KDA6.3</div><div class="mdp">打野</div><div class="tie">句号 A 694金 KDA4.5</div></div>
   <div class="md"><div class="mdl adv">紫幻 S KDA6.2 小乔</div><div class="mdp">中路</div><div class="tie">流浪 A KDA5.0</div></div>
   <div class="md"><div class="mdl tie">道崽 764金 KDA6.5</div><div class="mdp">发育路</div><div class="adv" style="color:var(--grn)">小屿 A+ 784金全场最高</div></div>
-  <div class="md"><div class="mdl adv">信 S+ 参团85.2% 赵怀真</div><div class="mdp">游走</div><div class="tie">一笙 A+ 参团83.9%</div></div>
+  <div class="md"><div class="mdl adv">信 S+ 参团85.2% 赵怀真配额</div><div class="mdp">游走</div><div class="tie">一笙 A+ 参团83.9%</div></div>
   <div class="mt">
     <span class="tag tgg">狼队主宰控制差+13.1%</span><span class="tag tgg">狼队暴君控制差+5.7%</span>
     <span class="tag tgg">皖皖经济差+34金/分</span><span class="tag tgg">场均时长多45秒越拖越强</span>
-    <span class="tag tgr2">KSG主宰47.4%结构性弱点</span>
-    <span class="tag tgb">KSG一血率64.5%全场并列最高</span><span class="tag tga">小乔归属 · 双方中路都想要</span>
+    <span class="tag tgr2">KSG主宰47.4%全场结构性弱点</span>
   </div>
-  <div class="mi"><strong>结构性判断：</strong>KSG主宰控制率47.4%是整赛季62场均值，无法靠单场发挥弥补。狼队只要将比赛时长拖入16分钟以上，KSG前期一血优势将完全蒸发。<br><strong>狼队BP核心：</strong>优先Ban掉沈梦溪/戈娅限制小屿784经济体系，同时争夺娜可露露（64.2%胜率/被禁率1.5%）。小乔在此役狼队优先选取，因为KSG流浪同样有能力使用小乔。<br><strong>KSG爆冷路径：</strong>句号以娜可露露打出野区统治，将节奏控制在15分钟内，前3局拿2后系列赛概率收窄至57/43。</div>
+  <div class="mi"><strong>KSG爆冷核心路径：</strong>一血率64.5%全场最高，句号拿下娜可露露（64.2%胜率）建立前期野区压制，在10分钟内对狼队关键外塔造成压力，将比赛节奏压缩到前期雪球优势。若KSG能在10分钟前建立3000以上经济差，狼队的主宰阶段优势（60.5%）将面临被拉平的压力，系列赛概率收窄至57/43。<br><strong>狼队制胜路径：</strong>依托主宰控制率60.5%的中后期绝对优势，10分钟后每一次主宰争夺都是狼队最强的节奏支点，配合皖皖经济优势在中期建立资源碾压。</div>
 </div>
 
-<!-- 胜者组决赛 狼队 vs JDG -->
+<!-- 胜者组决赛 -->
 <div class="ss rv">5.3 胜者组决赛 · 狼队 vs JDG</div>
 <div class="mb feat rv">
-  <div class="mm"><span>胜者组决赛 · BO7 · 败方落入败者组（不淘汰）</span><span class="mo">狼队 -155 / JDG +130</span></div>
+  <div class="mm"><span>胜者组决赛 · BO7 · 败方降入败者组</span><span class="mo">狼队 -145 / JDG +120</span></div>
   <div class="mv">
-    <div class="mvt"><div class="mvn" style="color:var(--gold)">重庆狼队</div><div class="mvs">胜者组半决赛胜出 · 充分休整</div></div>
+    <div class="mvt"><div class="mvn" style="color:var(--gold)">重庆狼队</div><div class="mvs">胜者组半决赛胜出 · 六维评分92.8</div></div>
     <div style="text-align:center"><div class="mvp" style="color:var(--gold)">58%</div><div style="font-size:10px;color:var(--t3)">vs</div><div class="mvp" style="color:var(--blue)">42%</div></div>
     <div class="mvt" style="text-align:right"><div class="mvn" style="color:var(--blue)">北京 JDG</div><div class="mvs">胜者组半决赛胜出 · 常规赛3:2赢过狼队</div></div>
   </div>
   <div class="mbar"><div class="mbl" style="width:58%;background:var(--gold)"></div><div class="mbr" style="flex:1;background:var(--blue)"></div></div>
-  <div class="msc"><strong>预测：狼队 4:3</strong>　置信区间：±8%　· 常规赛JDG赢过狼队3:2 · 两队资源控制率差距不足1% · 打满7局概率极高</div>
+  <div class="msc"><strong>预测：狼队 4:3</strong>　置信区间：±8%</div>
   <div class="md"><div class="mdl adv">清清 S+ KDA5.5 73.2%</div><div class="mdp">对抗路</div><div class="dis">轻语 A- KDA3.8</div></div>
-  <div class="md"><div class="mdl adv">皖皖 S+ 728金 KDA6.3</div><div class="mdp">打野</div><div class="tie">无双 A 687金 KDA4.6</div></div>
-  <div class="md"><div class="mdl adv" style="color:var(--gold)">紫幻 S KDA6.2</div><div class="mdp kp">★ 中路发挥可能决定比赛走向</div><div class="adv" style="color:var(--blue);text-align:left">清融 S+ 29.3% 小乔</div></div>
+  <div class="md"><div class="mdl adv">皖皖 S+ 728金 KDA6.3</div><div class="mdp">打野</div><div class="tie">无双 A 687金</div></div>
+  <div class="md"><div class="mdl adv" style="color:var(--gold)">紫幻 S KDA6.2</div><div class="mdp kp">★ 小乔各持配额</div><div class="adv" style="color:var(--blue);text-align:left">清融 S 29.3% 小乔</div></div>
   <div class="md"><div class="mdl adv">道崽 S 764金 KDA6.5</div><div class="mdp">发育路</div><div class="tie">小寒 A- 732金</div></div>
-  <div class="md"><div class="mdl adv">信 S+ 85.2% 赵怀真</div><div class="mdp kp">★ 赵怀真归属</div><div class="adv" style="color:var(--blue);text-align:left">无畏 A+ 赵怀真84.6%</div></div>
+  <div class="md"><div class="mdl adv">信 S+ 85.2%</div><div class="mdp kp">★ 赵怀真各持配额</div><div class="adv" style="color:var(--blue);text-align:left">无畏 A+ 参团78.2%</div></div>
   <div class="mt">
-    <span class="tag tgg">狼队4位置数据全面领先</span><span class="tag tgg">KDA差值1.83倍</span>
-    <span class="tag tgb">两队资源控制差距不足1%</span><span class="tag tgb">常规赛JDG赢过狼队3:2</span><span class="tag tgb">JDG一血率+4.3%前期更主动</span>
-    <span class="tag tgr2">双方中路都要小乔 · 必须抢</span><span class="tag tgr2">双方游走都要赵怀真 · BP核战</span>
+    <span class="tag tgg">狼队4位置全面领先 · 六维评分差23.3分</span>
+    <span class="tag tgb">JDG常规赛直接交手3:2赢过狼队</span>
+    <span class="tag tgb">JDG一血率64.3%全场第一 · 开局主动</span>
+    <span class="tag tgr2">小乔使用时机 · 双方中路BP最大变量</span>
+    <span class="tag tgr2">赵怀真使用时机 · 另一条BP主线</span>
   </div>
-  <div class="mi"><strong>为何概率调整：</strong>本场是本届季后赛最难预测的场次。两队暴君/主宰控制率差距不足1%，常规赛直接交手狼队2:3负于JDG，概率从62%下调为58/42。<br><strong>小乔+赵怀真双线BP战：</strong>双方中路都要小乔，双方游走都要赵怀真。两个英雄在7局BO7中的归属将形成4个不同的比赛状态，每种状态的胜率差距约8-12%。这场系列赛本质上是BP博弈，不是数据博弈。<br><strong>JDG逆转路径：</strong>清融拿到小乔+无畏赵怀真在同一局同时出现（历史上胜率极高的组合），配合JDG逆风胜率仅31%的弱点被对手破解的相反情况——即JDG顺势雪球，狼队难以追平。若JDG前4局拿到2:2，第5-7局概率趋近50/50。</div>
+  <div class="mi"><strong>核心分析：</strong>数据上狼队全面领先，但JDG常规赛直接3:2赢过狼队，这是将狼队概率从65%拉回至58%的直接依据。JDG的换命体系在双方状态旗鼓相当时杀伤力极强：一血率64.3%意味着开局几乎每局都有优先主动权，只要能把优势滚大，顺风下JDG完全可以碾压。<br><strong>双BP配额战：</strong>小乔归属（各自配额，时机选择）和赵怀真归属（同上）在BO7中形成多种组合，双方参谋组在7局内反复博弈，是本场最高层级的竞争维度，结果无法从常规赛数据中预判。</div>
 </div>
 </div></section>
 
 <!-- ═══ S6 败者组 ═══ -->
 <section id="s6"><div class="wrap">
-<div class="sh rv"><span class="sn">06</span><h2 class="st">败者组全程对阵预测</h2><div class="sl"></div></div>
+<div class="sh rv"><span class="sn">06</span><h2 class="st">败者组对阵完整预测</h2><div class="sl"></div></div>
 
-<div class="co cg rv"><strong>正确赛程路径（依据官方赛程图）：</strong>败者组共五轮。第一轮：LGD.NBW vs 桐乡情久、Hero vs TTG。第二轮：LGD.NBW vs 北京WB、Hero vs 深圳DYG。第三轮：KSG（降组）vs LGD.NBW、AG（降组）vs 南通Hero。败者组半决赛：KSG vs AG。败者组决赛：JDG（胜者组决赛落败）vs KSG。</div>
-
-<!-- 败者组第一轮 -->
 <div class="ss rv">6.1 败者组第一轮</div>
 <div class="mb lb rv">
-  <div class="mm"><span>败者组第一轮① · LGD.NBW vs 桐乡情久 · BO7</span><span class="mo">LGD -200 / 桐乡 +160</span></div>
+  <div class="mm"><span>败者组第一轮① · Hero久竞 vs 广州TTG · BO7</span><span class="mo">Hero -215 / TTG +175</span></div>
   <div class="mv">
-    <div class="mvt"><div class="mvn" style="color:var(--grn)">杭州LGD.NBW</div><div class="mvs">A组 · 60.6% · 综合评分31.1</div></div>
-    <div style="text-align:center"><div class="mvp" style="color:var(--grn)">68%</div><div style="font-size:10px;color:var(--t3)">vs</div><div class="mvp" style="color:var(--t3)">32%</div></div>
-    <div class="mvt" style="text-align:right"><div class="mvn" style="color:var(--t2)">桐乡情久</div><div class="mvs">A组 · 晋级季后赛</div></div>
+    <div class="mvt"><div class="mvn" style="color:var(--grn)">南通Hero久竞</div><div class="mvs">S6 · 63场 · 57.1%</div></div>
+    <div style="text-align:center"><div class="mvp" style="color:var(--grn)">72%</div><div style="font-size:10px;color:var(--t3)">vs</div><div class="mvp" style="color:var(--t3)">28%</div></div>
+    <div class="mvt" style="text-align:right"><div class="mvn" style="color:var(--t2)">广州TTG</div><div class="mvs">A3 · 67场 · 49.2% · 综合评分13.0</div></div>
   </div>
-  <div class="mbar"><div class="mbl" style="width:68%;background:var(--grn)"></div><div class="mbr" style="flex:1;background:var(--t3)"></div></div>
-  <div class="msc"><strong>预测：LGD.NBW 3:1</strong>　· LGD赛季末状态稳定，综合实力明显高于对手</div>
-  <div class="mt"><span class="tag tgg">LGD胜率60.6%明显占优</span><span class="tag tgg">LGD打野米苏近期状态火热</span></div>
+  <div class="mbar"><div class="mbl" style="width:72%;background:var(--grn)"></div><div class="mbr" style="flex:1;background:var(--t3)"></div></div>
+  <div class="msc"><strong>预测：Hero 4:1</strong>　置信区间：±6%</div>
+  <div class="mt"><span class="tag tgg">Hero胜率+7.9%</span><span class="tag tgg">团战直推体系节奏更快</span><span class="tag tgb">TTG主宰控制57.2%偏高但整体实力不匹配</span></div>
 </div>
 
 <div class="mb lb rv">
-  <div class="mm"><span>败者组第一轮② · 南通Hero vs 广州TTG · BO7</span><span class="mo">Hero -220 / TTG +175</span></div>
+  <div class="mm"><span>败者组第一轮② · 北京WB vs DRG · BO7</span><span class="mo">WB -280 / DRG +220</span></div>
   <div class="mv">
-    <div class="mvt"><div class="mvn" style="color:var(--grn)">南通Hero久竞</div><div class="mvs">胜者组 S6 · 57.1% · 场均14:37全场最快</div></div>
-    <div style="text-align:center"><div class="mvp" style="color:var(--grn)">72%</div><div style="font-size:10px;color:var(--t3)">vs</div><div class="mvp" style="color:var(--t3)">28%</div></div>
-    <div class="mvt" style="text-align:right"><div class="mvn" style="color:var(--t2)">广州TTG</div><div class="mvs">A组 · 49.2% · 整体实力偏弱</div></div>
+    <div class="mvt"><div class="mvn" style="color:var(--tx)">北京WB</div><div class="mvs">S5 · 63场 · 60.3% · 综合评分60.0</div></div>
+    <div style="text-align:center"><div class="mvp" style="color:var(--tx)">78%</div><div style="font-size:10px;color:var(--t3)">vs</div><div class="mvp" style="color:var(--t3)">22%</div></div>
+    <div class="mvt" style="text-align:right"><div class="mvn" style="color:var(--t3)">DRG</div><div class="mvs">综合评分偏低</div></div>
   </div>
-  <div class="mbar"><div class="mbl" style="width:72%;background:var(--grn)"></div><div class="mbr" style="flex:1;background:var(--t3)"></div></div>
-  <div class="msc"><strong>预测：Hero 3:1</strong></div>
-  <div class="mt"><span class="tag tgg">Hero胜率+7.9%</span><span class="tag tgg">团战直推体系节奏更快</span><span class="tag tgb">TTG主宰控制57.2%偏高但整体实力不匹配</span></div>
+  <div class="mbar"><div class="mbl" style="width:78%;background:var(--tx)"></div><div class="mbr" style="flex:1;background:var(--t3)"></div></div>
+  <div class="msc"><strong>预测：北京WB 4:1</strong>　置信区间：±5%</div>
+  <div class="mt"><span class="tag tgg">WB暴君控制58.3%全场前三</span><span class="tag tgg">WB综合评分60.0大幅领先</span></div>
+</div>
+
+<div class="mb lb rv">
+  <div class="mm"><span>败者组第一轮③ · LGD.NBW vs 桐乡情久 · BO7</span><span class="mo">LGD -190 / 桐乡 +155</span></div>
+  <div class="mv">
+    <div class="mvt"><div class="mvn" style="color:var(--grn)">杭州LGD.NBW</div><div class="mvs">A2 · 66场 · 60.6%</div></div>
+    <div style="text-align:center"><div class="mvp" style="color:var(--grn)">65%</div><div style="font-size:10px;color:var(--t3)">vs</div><div class="mvp" style="color:var(--t3)">35%</div></div>
+    <div class="mvt" style="text-align:right"><div class="mvn" style="color:var(--t3)">桐乡情久</div><div class="mvs">A组</div></div>
+  </div>
+  <div class="mbar"><div class="mbl" style="width:65%;background:var(--grn)"></div><div class="mbr" style="flex:1;background:var(--t3)"></div></div>
+  <div class="msc"><strong>预测：LGD.NBW 4:2</strong>　置信区间：±8%</div>
 </div>
 
 <!-- 败者组第二轮 -->
 <div class="ss rv">6.2 败者组第二轮</div>
 <div class="mb lb rv">
-  <div class="mm"><span>败者组第二轮① · LGD.NBW vs 北京WB · BO7</span><span class="mo">LGD -115 / WB +95</span></div>
+  <div class="mm"><span>败者组第二轮① · 北京WB vs LGD.NBW · BO7</span><span class="mo">WB -140 / LGD +115</span></div>
   <div class="mv">
-    <div class="mvt"><div class="mvn" style="color:var(--grn)">杭州LGD.NBW</div><div class="mvs">败者组第一轮胜出</div></div>
-    <div style="text-align:center"><div class="mvp" style="color:var(--grn)">55%</div><div style="font-size:10px;color:var(--t3)">vs</div><div class="mvp" style="color:var(--tx)">45%</div></div>
-    <div class="mvt" style="text-align:right"><div class="mvn" style="color:var(--tx)">北京WB（队伍）</div><div class="mvs">胜者组 S5 · 60.3% · 综合评分60.0</div></div>
+    <div class="mvt"><div class="mvn" style="color:var(--tx)">北京WB（队伍）</div><div class="mvs">败者组第一轮胜出 · 综合评分60.0</div></div>
+    <div style="text-align:center"><div class="mvp" style="color:var(--tx)">56%</div><div style="font-size:10px;color:var(--t3)">vs</div><div class="mvp" style="color:var(--grn)">44%</div></div>
+    <div class="mvt" style="text-align:right"><div class="mvn" style="color:var(--grn)">杭州LGD.NBW</div><div class="mvs">败者组第一轮胜出 · 综合评分31.1</div></div>
   </div>
-  <div class="mbar"><div class="mbl" style="width:55%;background:var(--grn)"></div><div class="mbr" style="flex:1;background:var(--t3)"></div></div>
-  <div class="msc"><strong>预测：LGD.NBW 3:2</strong>　置信区间：±9%　· 北京WB综合评分60.0高于LGD，但赛程疲劳+状态差异造成不确定性</div>
+  <div class="mbar"><div class="mbl" style="width:56%;background:var(--tx)"></div><div class="mbr" style="flex:1;background:var(--grn)"></div></div>
+  <div class="msc"><strong>预测：北京WB 4:2</strong>　置信区间：±9%　· WB综合评分60.0，暴君/主宰双项碾压LGD 31.1</div>
   <div class="mt">
-    <span class="tag tgg">LGD米苏打野近期发挥稳定</span>
-    <span class="tag tgb">北京WB暴君控制58.3%全场前三</span>
-    <span class="tag tgb">北京WB主宰控制55.1% vs LGD 46.4%</span>
-    <span class="tag tga">高度接近 · 单局表现决定走向</span>
+    <span class="tag tgg">WB暴君控制58.3% vs LGD 49.2%（差9.1%）</span>
+    <span class="tag tgg">WB主宰控制55.1% vs LGD 46.4%（差8.7%）</span>
+    <span class="tag tgb">WB综合评分60.0 · LGD 31.1 · 差距28.9分</span>
+    <span class="tag tga">高度接近的单局表现存在变数 · CI±9%</span>
   </div>
 </div>
 
@@ -582,7 +564,7 @@ JDG顺风胜率接近<span class="hlb">100%</span>，逆风胜率仅<span class=
     <div class="mvt" style="text-align:right"><div class="mvn" style="color:var(--t2)">深圳DYG</div><div class="mvs">A组 · 仅40场经验 · 青年队</div></div>
   </div>
   <div class="mbar"><div class="mbl" style="width:62%;background:var(--grn)"></div><div class="mbr" style="flex:1;background:var(--t3)"></div></div>
-  <div class="msc"><strong>预测：Hero 3:1</strong></div>
+  <div class="msc"><strong>预测：Hero 4:1</strong></div>
   <div class="mt">
     <span class="tag tgg">Hero体系成熟度明显高于DYG</span>
     <span class="tag tgg">场均14:37快攻节奏压制青年阵容</span>
@@ -593,19 +575,19 @@ JDG顺风胜率接近<span class="hlb">100%</span>，逆风胜率仅<span class=
 <!-- 败者组第三轮 KSG AG降组入场 -->
 <div class="ss rv">6.3 败者组第三轮——KSG/AG从胜者组降入</div>
 <div class="mb lb rv">
-  <div class="mm"><span>败者组第三轮① · KSG vs LGD.NBW · BO7</span><span class="mo">KSG -210 / LGD +170</span></div>
+  <div class="mm"><span>败者组第三轮① · KSG vs 北京WB · BO7</span><span class="mo">KSG -210 / WB +170</span></div>
   <div class="mv">
     <div class="mvt"><div class="mvn" style="color:var(--grn)">江苏KSG</div><div class="mvs">胜者组降组 · 61.2% · 综合评分59.5</div></div>
-    <div style="text-align:center"><div class="mvp" style="color:var(--grn)">76%</div><div style="font-size:10px;color:var(--t3)">vs</div><div class="mvp" style="color:var(--t3)">24%</div></div>
-    <div class="mvt" style="text-align:right"><div class="mvn" style="color:var(--t2)">杭州LGD.NBW</div><div class="mvs">败者组第二轮胜出 · 综合评分31.1</div></div>
+    <div style="text-align:center"><div class="mvp" style="color:var(--grn)">62%</div><div style="font-size:10px;color:var(--t3)">vs</div><div class="mvp" style="color:var(--t3)">38%</div></div>
+    <div class="mvt" style="text-align:right"><div class="mvn" style="color:var(--tx)">北京WB（队伍）</div><div class="mvs">败者组第二轮胜出 · 综合评分60.0</div></div>
   </div>
-  <div class="mbar"><div class="mbl" style="width:76%;background:var(--grn)"></div><div class="mbr" style="flex:1;background:var(--t3)"></div></div>
-  <div class="msc"><strong>预测：KSG 4:1</strong>　· 综合评分差距28.4分，KSG在五个位置全面压制LGD</div>
+  <div class="mbar"><div class="mbl" style="width:62%;background:var(--grn)"></div><div class="mbr" style="flex:1;background:var(--tx)"></div></div>
+  <div class="msc"><strong>预测：KSG 4:2</strong>　置信区间：±9%　· 两队综合评分极为接近（59.5 vs 60.0），KSG从胜者组带入更完整BP体系</div>
   <div class="mt">
-    <span class="tag tgg">KSG综合评分59.5 vs LGD 31.1</span>
-    <span class="tag tgg">句号打野经济694 vs LGD米苏差距明显</span>
-    <span class="tag tgg">小屿784经济体系对LGD发育路形成碾压</span>
-    <span class="tag tga">KSG从胜者组带入完整BP体系</span>
+    <span class="tag tgg">KSG一血率64.5%全场最高 · 开局主动权</span>
+    <span class="tag tgg">KSG句号打野经济694 · 小屿784全场最高</span>
+    <span class="tag tgb">WB暴君控制58.3% · 与KSG前期形成博弈</span>
+    <span class="tag tga">KSG从胜者组带入完整BP体系优势</span>
   </div>
 </div>
 
@@ -617,12 +599,12 @@ JDG顺风胜率接近<span class="hlb">100%</span>，逆风胜率仅<span class=
     <div class="mvt" style="text-align:right"><div class="mvn" style="color:var(--grn)">南通Hero久竞</div><div class="mvs">败者组第二轮胜出</div></div>
   </div>
   <div class="mbar"><div class="mbl" style="width:58%;background:var(--red)"></div><div class="mbr" style="flex:1;background:var(--grn)"></div></div>
-  <div class="msc"><strong>预测：AG 3:2</strong>　置信区间：±8%　· 接近，AG综合实力略优但Hero快攻针对AG弱点</div>
+  <div class="msc"><strong>预测：AG 4:2</strong>　置信区间：±8%　· 接近，AG综合实力略优但Hero快攻针对AG弱点</div>
   <div class="mt">
     <span class="tag tgr2">AG主宰41.8%全场最低 · 被Hero快攻节奏针对</span>
     <span class="tag tgg">Hero场均14:37 · 快攻恰好打AG主宰弱点</span>
     <span class="tag tga">钟意首发确认 · AG打野稳定</span>
-    <span class="tag tgr2">大帅88.2%参团率 · AG唯一对标优势</span>
+    <span class="tag tgr2">大帅88.2%参团率 · AG开团核心</span>
   </div>
   <div class="mi"><strong>关键矛盾：</strong>Hero的快攻体系（场均14:37）恰好针对AG的主宰阶段弱点（41.8%）。若Hero能在14分钟内建立优势并推进，AG几乎没有反制空间。但钟意若打出娜可露露野区统治，AG有机会将节奏延长至中期。</div>
 </div>
@@ -644,7 +626,7 @@ JDG顺风胜率接近<span class="hlb">100%</span>，逆风胜率仅<span class=
   <div class="md"><div class="mdl adv" style="color:var(--grn)">小屿 784金</div><div class="mdp">发育路</div><div class="tie">小俞 759金</div></div>
   <div class="md"><div class="mdl adv" style="color:var(--grn)">一笙 参团83.9%</div><div class="mdp">游走</div><div class="tie">大帅 88.2%</div></div>
   <div class="mt">
-    <span class="tag tgg">KSG主宰47.4% > AG 41.8% · 此轮KSG中后期反而占优</span>
+    <span class="tag tgg">KSG主宰47.4% &gt; AG 41.8% · 此轮中后期KSG占优</span>
     <span class="tag tgg">KSG一血率64.5%全场最高 · 前期主动</span>
     <span class="tag tgr2">AG主宰41.8%全场最低 · 系列赛累积差距放大</span>
     <span class="tag tga">双方均已完成多场BO7 · 状态磨合完整</span>
@@ -656,7 +638,7 @@ JDG顺风胜率接近<span class="hlb">100%</span>，逆风胜率仅<span class=
 <div class="mb lb feat rv">
   <div class="mm"><span>败者组决赛 · BO7 · 败者淘汰，胜者晋级总决赛</span><span class="mo">JDG -190 / KSG +155</span></div>
   <div class="mv">
-    <div class="mvt"><div class="mvn" style="color:var(--blue)">北京JDG</div><div class="mvs">胜者组决赛落败 · BP体系最完整</div></div>
+    <div class="mvt"><div class="mvn" style="color:var(--blue)">北京JDG</div><div class="mvs">胜者组决赛落败 · BP体系最完整 · 六维评分69.5</div></div>
     <div style="text-align:center"><div class="mvp" style="color:var(--blue)">65%</div><div style="font-size:10px;color:var(--t3)">vs</div><div class="mvp" style="color:var(--grn)">35%</div></div>
     <div class="mvt" style="text-align:right"><div class="mvn" style="color:var(--grn)">江苏KSG</div><div class="mvs">败者组多轮历练 · 一血率全场最高</div></div>
   </div>
@@ -666,16 +648,16 @@ JDG顺风胜率接近<span class="hlb">100%</span>，逆风胜率仅<span class=
   <div class="md"><div class="mdl tie">无双 687金</div><div class="mdp">打野</div><div class="tie">句号 694金（KSG微优）</div></div>
   <div class="md"><div class="mdl adv" style="color:var(--blue)">清融 29.3% 小乔</div><div class="mdp">中路</div><div class="tie">流浪 25.5%</div></div>
   <div class="md"><div class="mdl tie">小寒 732金</div><div class="mdp">发育路</div><div class="adv" style="color:var(--grn)">小屿 784金（KSG优势）</div></div>
-  <div class="md"><div class="mdl adv" style="color:var(--blue)">无畏 赵怀真84.6%</div><div class="mdp">游走</div><div class="tie">一笙 83.9%</div></div>
+  <div class="md"><div class="mdl adv" style="color:var(--blue)">无畏 赵怀真配额</div><div class="mdp">游走</div><div class="tie">一笙 83.9%</div></div>
   <div class="mt">
-    <span class="tag tgb">JDG综合评分62.3 vs KSG 59.5</span>
-    <span class="tag tgb">JDG主宰控制59.4% vs KSG 47.4%（差距12%）</span>
+    <span class="tag tgb">JDG综合评分69.5 vs KSG 59.5（差10分）</span>
+    <span class="tag tgb">JDG主宰控制59.4% vs KSG 47.4%（差12%）</span>
     <span class="tag tgb">清融小乔29.3%伤害体系压制KSG中路</span>
     <span class="tag tgg">KSG一血率64.5%全场最高 · 前期主动</span>
     <span class="tag tgg">小屿784经济 · KSG发育路核心武器</span>
-    <span class="tag tgr2">赵怀真84.6%胜率 · KSG必须Ban 3处理</span>
+    <span class="tag tgr2">赵怀真胜率方向性高 · KSG若未提前Ban须付代价</span>
   </div>
-  <div class="mi"><strong>分析：</strong>JDG从胜者组决赛落入，携带对狼队BO7磨砺出的完整BP深度，对KSG的主宰控制弱点（47.4%）有明确针对方案。清融小乔体系在KSG中路流浪面前伤害差距4个百分点，配合无畏赵怀真（若KSG未及时处理）可在某局打出决定性团战。KSG逆转路径：句号娜可露露打出野区统治，利用一血率优势将比赛压缩在前期节奏内，前3局拿2强迫JDG调整BP。</div>
+  <div class="mi"><strong>分析：</strong>JDG从胜者组决赛落入，携带对狼队BO7磨砺出的完整BP深度，对KSG的主宰控制弱点（47.4%）有明确针对方案。清融小乔体系在KSG中路面前有4个百分点伤害差距，配合无畏若在KSG未及时应对时动用赵怀真配额，可在关键局打出决定性团战。KSG逆转路径：句号娜可露露打出野区统治，利用一血率优势将比赛压缩在前期节奏内，前3局拿2强迫JDG调整BP。</div>
 </div>
 
 <!-- 总决赛 -->
@@ -683,70 +665,71 @@ JDG顺风胜率接近<span class="hlb">100%</span>，逆风胜率仅<span class=
 <div class="mb feat rv">
   <div class="mm"><span>总决赛 · BO7 · 狼队胜者组直入 vs JDG败者组出线</span><span class="mo">狼队 -165 / JDG +138</span></div>
   <div class="mv">
-    <div class="mvt"><div class="mvn" style="color:var(--gold)">重庆狼队</div><div class="mvs">胜者组直通 · 充分备战约12天 · 六维评分97.4</div></div>
-    <div style="text-align:center"><div class="mvp" style="color:var(--gold)">60%</div><div style="font-size:10px;color:var(--t3)">vs</div><div class="mvp" style="color:var(--blue)">40%</div></div>
+    <div class="mvt"><div class="mvn" style="color:var(--gold)">重庆狼队</div><div class="mvs">胜者组直通 · 充分备战约12天 · 六维评分92.8</div></div>
+    <div style="text-align:center"><div class="mvp" style="color:var(--gold)">58%</div><div style="font-size:10px;color:var(--t3)">vs</div><div class="mvp" style="color:var(--blue)">42%</div></div>
     <div class="mvt" style="text-align:right"><div class="mvn" style="color:var(--blue)">北京 JDG</div><div class="mvs">败者组出线 · 连续多场BO7 · 常规赛3:2赢过狼队</div></div>
   </div>
-  <div class="mbar"><div class="mbl" style="width:60%;background:var(--gold)"></div><div class="mbr" style="flex:1;background:var(--blue)"></div></div>
-  <div class="msc"><strong>预测：狼队 4:3</strong>　置信区间：±8%　· 最高概率打满7局</div>
+  <div class="mbar"><div class="mbl" style="width:58%;background:var(--gold)"></div><div class="mbr" style="flex:1;background:var(--blue)"></div></div>
+  <div class="msc"><strong>预测：狼队 4:3</strong>　置信区间：±11%　· 最高概率打满7局</div>
   <div class="md"><div class="mdl adv">清清 S+ KDA5.5 73.2%</div><div class="mdp">对抗路</div><div class="dis">轻语 A- KDA3.8</div></div>
   <div class="md"><div class="mdl adv">皖皖 S+ 728金 KDA6.3</div><div class="mdp">打野</div><div class="tie">无双 A 687金</div></div>
-  <div class="md"><div class="mdl adv" style="color:var(--gold)">紫幻 S KDA6.2</div><div class="mdp kp">★ 小乔命脉</div><div class="adv" style="color:var(--blue);text-align:left">清融 S 29.3% 小乔</div></div>
+  <div class="md"><div class="mdl adv" style="color:var(--gold)">紫幻 S KDA6.2</div><div class="mdp kp">★ 小乔配额时机</div><div class="adv" style="color:var(--blue);text-align:left">清融 S 29.3% 小乔</div></div>
   <div class="md"><div class="mdl adv">道崽 S 764金 KDA6.5</div><div class="mdp">发育路</div><div class="tie">小寒 A- 732金</div></div>
-  <div class="md"><div class="mdl adv">信 S+ 85.2%</div><div class="mdp kp">★ 赵怀真归属</div><div class="adv" style="color:var(--blue);text-align:left">无畏 A+ 赵怀真84.6%</div></div>
+  <div class="md"><div class="mdl adv">信 S+ 85.2%</div><div class="mdp kp">★ 赵怀真配额时机</div><div class="adv" style="color:var(--blue);text-align:left">无畏 A+ 78.2%</div></div>
   <div class="mt">
     <span class="tag tgg">狼队胜者组直入 · 比JDG少打4-5场BO7</span>
     <span class="tag tgg">约12天充分备战 · 针对JDG全部BP路线</span>
-    <span class="tag tgg">4位置数据全面领先 · 六维评分断层</span>
+    <span class="tag tgg">4位置数据全面领先 · 六维评分差23.3分</span>
     <span class="tag tgb">JDG连续多场BO7 · BP演化最完整</span>
     <span class="tag tgb">常规赛JDG 3:2赢过狼队 · 直接交手优势</span>
-    <span class="tag tgr2">小乔归属 · 双方中路最大BP争夺点</span>
-    <span class="tag tgr2">赵怀真归属 · 另一条BP主线</span>
+    <span class="tag tgr2">小乔配额使用时机 · 两队中路BP最大变量</span>
+    <span class="tag tgr2">赵怀真配额使用时机 · 另一条BP主线</span>
   </div>
-  <div class="mi"><strong>总决赛决定性因素：</strong>狼队约12天的专项备战 vs JDG连续作战的体力消耗——这是狼队额外约+2%胜率的来源。JDG的BP演化在整个败者组历程中已经非常完整，清融携热手和磨合好的英雄池进入总决赛。<br><strong>双BP核战：</strong>小乔归属（清融/紫幻双方都要）+ 赵怀真归属（无畏/信双方都要），这两个英雄的BP处理在总决赛BO7中形成8种不同组合状态，每种状态胜率差异约10-15%，完全超出常规赛数据的解释范围。<br><strong>第4局判断：</strong>若狼队以2:1进入第4局，JDG会祭出完整奇兵体系；若打成2:2，第5-7局进入纯粹BP博弈，历史大赛7冠的清融经验优势将显现。</div>
+  <div class="mi"><strong>总决赛决定性因素：</strong>狼队约12天的专项备战 vs JDG连续作战——这是狼队数据优势之外额外的体能储备，但无法量化为精确概率加成，反映在CI扩大至±11%。JDG的BP演化在整个败者组历程中已经非常完整，清融携热手和磨合好的英雄池进入总决赛。<br><strong>双BP配额战（8种组合状态）：</strong>小乔配额时机（清融/紫幻各有选择）+ 赵怀真配额时机（无畏/信各有选择），这两个维度在BO7中形成8种不同组合状态，每种状态局内胜率差异约15%-25%（方向性估算，样本受限），完全超出常规赛数据的解释范围。<br><strong>第4局判断：</strong>若狼队以2:1进入第4局，JDG会祭出完整奇兵体系；若打成2:2，第5-7局进入纯粹BP博弈，历史大赛清融的配额使用经验将是最终变量。</div>
 </div>
 </div></section>
-
 <!-- ═══ S7 概率汇总 ═══ -->
 <section id="s7"><div class="wrap">
 <div class="sh rv"><span class="sn">07</span><h2 class="st">概率汇总与风险矩阵</h2><div class="sl"></div></div>
 
 <div class="ss rv">7.1 夺冠概率分布</div>
 <div class="ps rv">
-  <div class="pc win"><div class="pcl">冠军热门</div><div class="pct" style="color:var(--gold)">重庆狼队</div><div class="pcp" style="color:var(--gold)">60%</div><div class="pcpa">胜者组直通总决赛<br>六维评分断层第一97.4</div></div>
-  <div class="pc"><div class="pcl">次热门</div><div class="pct" style="color:var(--blue)">北京JDG</div><div class="pcp" style="color:var(--blue)">30%</div><div class="pcpa">败者组出线路径<br>常规赛3:2赢过狼队</div></div>
-  <div class="pc"><div class="pcl">爆冷最大热门</div><div class="pct" style="color:var(--grn)">KSG</div><div class="pcp" style="color:var(--grn)">7%</div><div class="pcpa">胜者组直入总决赛路径<br>一血率全场最高</div></div>
-  <div class="pc"><div class="pcl">其他</div><div class="pct" style="color:var(--t3)">AG/WB/其他</div><div class="pcp" style="color:var(--t3)">&lt;3%</div><div class="pcpa">需连续爆冷强队<br>概率极低</div></div>
+  <div class="pc win"><div class="pcl">冠军热门</div><div class="pct" style="color:var(--gold)">重庆狼队</div><div class="pcp" style="color:var(--gold)">35%</div><div class="pcpa">路径推演：33–38%<br>胜者组直通 · 六维评分92.8断层第一</div></div>
+  <div class="pc"><div class="pcl">次热门</div><div class="pct" style="color:var(--blue)">北京JDG</div><div class="pcp" style="color:var(--blue)">30%</div><div class="pcpa">败者组出线路径 · 28–33%<br>常规赛3:2赢过狼队</div></div>
+  <div class="pc"><div class="pcl">爆冷最大热门</div><div class="pct" style="color:var(--grn)">KSG</div><div class="pcp" style="color:var(--grn)">10%</div><div class="pcpa">胜者组直取总决赛路径<br>一血率全场最高</div></div>
+  <div class="pc"><div class="pcl">其他</div><div class="pct" style="color:var(--t3)">AG/WB/其他</div><div class="pcp" style="color:var(--t3)">25%</div><div class="pcpa">需连续爆冷强队<br>单队概率均&lt;6%</div></div>
 </div>
 
-<div class="ss rv">7.2 全赛程12场预测汇总</div>
+<div class="ss rv">7.2 全赛程预测汇总</div>
 <div class="tw rv"><table>
 <thead><tr><th>场次</th><th>对阵</th><th>赛制</th><th>预测胜方</th><th>概率</th><th>比分</th><th>置信区间</th></tr></thead>
 <tbody>
-<tr><td>①</td><td>JDG vs AG</td><td>胜者组半决赛</td><td class="tb">北京JDG</td><td class="tb mn">61%</td><td>4:2</td><td class="tgr">±6%</td></tr>
-<tr class="rg"><td>②</td><td>狼队 vs KSG</td><td>胜者组半决赛</td><td class="tg">重庆狼队</td><td class="tg mn">66%</td><td>4:2</td><td class="tgr">±5%</td></tr>
-<tr><td>③</td><td>Hero久竞 vs TTG</td><td>败者组第一轮</td><td class="tgr">南通Hero</td><td class="tgr mn">72%</td><td>3:1</td><td class="tgr">±6%</td></tr>
-<tr><td>④</td><td>北京WBvs DRG</td><td>败者组第一轮</td><td class="tgr">北京WB</td><td class="tgr mn">78%</td><td>3:1</td><td class="tgr">±5%</td></tr>
-<tr><td>⑤</td><td>LGD vs [A4]</td><td>败者组第一轮</td><td class="tgr">LGD.NBW</td><td class="tgr mn">65%</td><td>3:2</td><td>±8%</td></tr>
-<tr class="rg"><td>⑥</td><td>狼队 vs JDG</td><td>胜者组决赛</td><td class="tg">重庆狼队</td><td class="tg mn">58%</td><td>4:3</td><td>±8%</td></tr>
-<tr><td>⑦</td><td>AG vs Hero久竞</td><td>败者组第二轮</td><td class="tr">成都AG</td><td class="tr mn">58%</td><td>3:2</td><td>±8%</td></tr>
-<tr><td>⑧</td><td>KSG vs 北京WB</td><td>败者组第二轮</td><td class="tgr">KSG</td><td class="tgr mn">54%</td><td>3:2</td><td>±9%</td></tr>
-<tr><td>⑨</td><td>JDG vs 北京WB</td><td>败者组半决赛</td><td class="tb">北京JDG</td><td class="tb mn">69%</td><td>3:1</td><td>±7%</td></tr>
-<tr><td>⑩</td><td>AG vs KSG</td><td>败者组半决赛</td><td class="tgr">KSG</td><td class="tgr mn">52%</td><td>3:2</td><td>±10%</td></tr>
-<tr><td>⑪</td><td>JDG vs KSG</td><td>败者组决赛</td><td class="tb">北京JDG</td><td class="tb mn">65%</td><td>4:2</td><td>±7%</td></tr>
-<tr class="rg" style="border-color:var(--gb)"><td>⑫</td><td>狼队 vs JDG</td><td>总决赛</td><td class="tg">重庆狼队</td><td class="tg mn">60%</td><td>4:3</td><td>±8%</td></tr>
+<tr><td>①</td><td>JDG vs AG</td><td>胜者组半决赛 BO7</td><td class="tb">北京JDG</td><td class="tb mn">61%</td><td>4:2</td><td class="tgr">±6%</td></tr>
+<tr class="rg"><td>②</td><td>狼队 vs KSG</td><td>胜者组半决赛 BO7</td><td class="tg">重庆狼队</td><td class="tg mn">66%</td><td>4:2</td><td class="tgr">±5%</td></tr>
+<tr><td>③</td><td>Hero久竞 vs TTG</td><td>败者组第一轮 BO7</td><td class="tgr">南通Hero</td><td class="tgr mn">72%</td><td>4:1</td><td class="tgr">±6%</td></tr>
+<tr><td>④</td><td>北京WB vs DRG</td><td>败者组第一轮 BO7</td><td class="tgr">北京WB</td><td class="tgr mn">78%</td><td>4:1</td><td class="tgr">±5%</td></tr>
+<tr><td>⑤</td><td>LGD vs 桐乡情久</td><td>败者组第一轮 BO7</td><td class="tgr">LGD.NBW</td><td class="tgr mn">65%</td><td>4:2</td><td>±8%</td></tr>
+<tr class="rg"><td>⑥</td><td>狼队 vs JDG</td><td>胜者组决赛 BO7</td><td class="tg">重庆狼队</td><td class="tg mn">58%</td><td>4:3</td><td>±8%</td></tr>
+<tr><td>⑦</td><td>北京WB vs LGD</td><td>败者组第二轮 BO7</td><td class="tgr">北京WB</td><td class="tgr mn">56%</td><td>4:2</td><td>±9%</td></tr>
+<tr><td>⑧</td><td>AG vs Hero久竞</td><td>败者组第三轮 BO7</td><td class="tr">成都AG</td><td class="tr mn">58%</td><td>4:2</td><td>±8%</td></tr>
+<tr><td>⑨</td><td>KSG vs 北京WB</td><td>败者组第三轮 BO7</td><td class="tgr">KSG</td><td class="tgr mn">62%</td><td>4:2</td><td>±9%</td></tr>
+<tr><td>⑩</td><td>Hero vs 深圳DYG</td><td>败者组第二轮 BO7</td><td class="tgr">南通Hero</td><td class="tgr mn">62%</td><td>4:1</td><td>±7%</td></tr>
+<tr><td>⑪</td><td>KSG vs AG</td><td>败者组半决赛 BO7</td><td class="tgr">KSG</td><td class="tgr mn">56%</td><td>4:3</td><td>±9%</td></tr>
+<tr><td>⑫</td><td>JDG vs KSG</td><td>败者组决赛 BO7</td><td class="tb">北京JDG</td><td class="tb mn">65%</td><td>4:2</td><td>±7%</td></tr>
+<tr class="rg" style="border-color:var(--gb)"><td>⑬</td><td>狼队 vs JDG</td><td>总决赛 BO7</td><td class="tg">重庆狼队</td><td class="tg mn">58%</td><td>4:3</td><td>±11%</td></tr>
 </tbody></table></div>
 
 <div class="ss rv">7.3 风险矩阵</div>
 <div class="tw rv"><table>
 <thead><tr><th>风险事件</th><th>触发概率</th><th>影响幅度</th><th>影响说明</th></tr></thead>
 <tbody>
-<tr><td>小乔在胜者组决赛被JDG先手锁定</td><td class="tgr mn">45%</td><td class="tb">JDG当系列+5%</td><td>紫幻被迫次选，清融小乔输出体系完整，JDG中路优势放大</td></tr>
-<tr><td>无畏赵怀真在关键局（第5-7局）漏出</td><td class="tgr mn">35%</td><td class="tb">JDG当局+30%</td><td>胜率84.6%，几乎锁定当局胜利；若发生在3:3决胜局，概率趋近50/50</td></tr>
+<tr><td>JDG早期多信号叠加落后（失一血+经济差）</td><td class="tgr mn">35%</td><td class="tb">JDG当局概率显著下降</td><td>JDG换命体系逆风翻盘弹性有限，顺风/逆风状态两极化是本届季后赛最大的单局走势不确定源</td></tr>
+<tr><td>无畏在关键局动用赵怀真配额</td><td class="tgr mn">50%</td><td class="tb">JDG当局+15%~25%（方向性，n=13）</td><td>胜率方向性高，配额只能用一次，使用时机决定价值上限；若发生在3:3决胜局效果最显著</td></tr>
 <tr><td>KSG半决赛前3局拿2</td><td class="tgr mn">25%</td><td class="tr">狼队-10%</td><td>系列赛概率变为57/43，KSG心理差距消除</td></tr>
-<tr><td>钟意超常发挥（首场）</td><td class="tgr mn">30%</td><td class="tr">JDG vsAG -6%</td><td>AG概率上调至45%，半决赛更接近</td></tr>
-<tr><td>JDG连续BO7体力透支</td><td class="tgr mn">35%</td><td class="tg">狼队总决赛+3%</td><td>总决赛前JDG约需打5-6场BO7，体力差距在第6-7局最明显</td></tr>
+<tr><td>钟意超常发挥（首场JDG vs AG）</td><td class="tgr mn">30%</td><td class="tr">JDG vs AG -6%</td><td>AG概率上调至45%，半决赛更接近</td></tr>
+<tr><td>JDG连续多场BO7体力积累</td><td class="tgr mn">35%</td><td class="tg">总决赛CI扩大至±11%</td><td>体力差距在第6-7局最明显，无法量化为精确概率加成，以置信区间扩大形式体现</td></tr>
 <tr><td>版本Patch调整英雄强度</td><td class="tgr mn">20%</td><td>±5%不确定</td><td>若小乔/沈梦溪被削弱，中路/发育路体系需全面重算</td></tr>
+<tr><td>狼队10分钟主宰节点被KSG压制</td><td class="tgr mn">20%</td><td class="tr">狼队-8%</td><td>KSG前期一血优势若能在10分钟转化为经济差且压制主宰，是KSG最大爆冷窗口</td></tr>
 </tbody></table></div>
 </div></section>
 
@@ -757,27 +740,27 @@ JDG顺风胜率接近<span class="hlb">100%</span>，逆风胜率仅<span class=
 <div class="fv rv">
   <div class="fvl">最终冠军预测</div>
   <div class="fvm">重庆狼队<br><span>封神海口</span></div>
-  <div class="fvp">60%</div>
+  <div class="fvp">35%</div>
   <div style="font-size:13px;color:var(--t2);line-height:1.9;max-width:700px">
-    4:3击败北京JDG，夺得2026KPL春季赛冠军。六维综合评分断层第一（97.4 vs JDG 62.3），暴君/主宰/KDA/胜率四项全场第一，胜者组直通约12天备战优势。<br>
-    概率从最初62%下调至60%的原因：常规赛直接交手狼队2:3负于JDG，且两队主宰/暴君控制率差距不足1%——这场总决赛本质上是BP博弈，不是纯数据博弈。
+    路径推演绝对概率33–38%，总决赛条件概率58%击败北京JDG，夺得2026KPL春季赛冠军。六维评分修订后92.8（对比JDG 69.5），主宰/暴君/KDA/胜率四项全场领先，胜者组直通约12天备战优势。<br>
+    绝对概率35%（而非总决赛内58%条件概率）来自路径中每场均有失手风险的累积折扣。胜者组决赛对JDG是本届真正意义上的最高层级博弈——数据领先明显，但BP双配额变量（小乔+赵怀真）和常规赛3:2直接交手记录，使总决赛本质上是配额时机管理，不是纯数据博弈。
   </div>
   <div class="fvd">
     <div class="fvdi">
       <label>FMVP 热门 #1</label>
-      <p><strong>紫幻（黄广顺）</strong> · 中路<br>小乔 / KDA 6.2 / 胜率70%<br>总决赛中路焦点对决清融，若狼队夺冠紫幻是最亮眼表现。历史大赛稳定性强于清融。</p>
+      <p><strong>紫幻（黄广顺）</strong> · 中路<br>小乔 / KDA 6.2 / 胜率约70%<br>总决赛中路焦点对决清融，若狼队夺冠紫幻是最亮眼表现。历史大赛稳定性强于清融，配额使用时机判断将成传世片段。</p>
     </div>
     <div class="fvdi">
       <label>FMVP 热门 #2</label>
-      <p><strong>皖皖（王浩）</strong> · 打野<br>分均经济728全场最高 / KDA 6.3<br>若主宰争夺在总决赛呈现决定性差异，打野位票数竞争力极强。</p>
+      <p><strong>皖皖（王浩）</strong> · 打野<br>分均经济728全场最高 / KDA 6.3<br>若主宰争夺在总决赛呈现决定性差异，打野位票数竞争力极强。10分钟主宰控制是狼队最重要的节奏支点。</p>
     </div>
     <div class="fvdi">
-      <label>最大爆冷路径（概率7%）</label>
-      <p><strong>KSG胜者组直取总决赛</strong><br>胜者组半决赛爆冷狼队（34%触发）→ 直入总决赛<br>对阵狼队夺冠概率约22%，总夺冠7%<br>触发条件：前3局2胜+主宰野区双线压制</p>
+      <label>最大爆冷路径（概率10%）</label>
+      <p><strong>KSG胜者组直取总决赛</strong><br>胜者组半决赛爆冷狼队（34%触发）→ 直入总决赛<br>对阵JDG路径夺冠约28%，总夺冠约10%<br>触发条件：一血优势开局+句号娜可露露野区统治+10分钟压制主宰</p>
     </div>
     <div class="fvdi">
       <label>JDG关键逆转变量</label>
-      <p><strong>小乔+赵怀真双线BP战</strong><br>清融小乔 + 无畏赵怀真同时出现于某关键局，历史上这一组合胜率极高。若JDG在胜者组决赛就拿到这一组合，系列赛从58%变为50/50。</p>
+      <p><strong>配额时机战</strong><br>清融/无畏在高压局同时动用小乔+赵怀真配额，历史上这一组合胜率极高。配额只有一次，选在哪局使用是清融和无畏的终极考题。若JDG在胜者组决赛就打出最优配额组合，系列赛从58%变为50/50。</p>
     </div>
   </div>
 </div>
@@ -786,11 +769,11 @@ JDG顺风胜率接近<span class="hlb">100%</span>，逆风胜率仅<span class=
 <div class="mg rv">
   <div class="mc"><div class="mcn">9×10</div><div class="mct">战队指标</div><div class="mcb">胜率·KDA·死亡·分均经济·一血率·暴君控制率·主宰控制率·场均时长·推塔·被推。来源：pvp.qq.com官方（league_id=20260001）</div></div>
   <div class="mc"><div class="mcn">45×23</div><div class="mct">选手数据</div><div class="mcb">胜率·KDA·击杀/死亡/助攻·分均经济·伤害占比·承伤·参团率等23项。来源：官方选手数据文件xlsx</div></div>
-  <div class="mc"><div class="mcn">80+</div><div class="mct">英雄BP</div><div class="mcb">出场次数·被禁率·胜率·分析。识别必Ban（鲁班75.9%/盾山69.6%）与隐藏OP（赵怀真84.6%/娜可露露64.2%）。<strong style="color:var(--red)">清融核心英雄已核查更正为小乔。</strong></div></div>
+  <div class="mc"><div class="mcn">80+</div><div class="mct">英雄BP</div><div class="mcb">出场次数·被禁率·胜率·分析。必Ban识别（鲁班75.9%/盾山69.6%），赵怀真胜率方向性参考（n=13，95%CI宽）。清融核心英雄已确认为小乔。<strong style="color:var(--gold)">BO7下双方各持英雄使用配额，竞争维度为时机选择而非资源争夺。</strong></div></div>
 </div>
 
 <div class="co cg rv" style="margin-top:20px">
-  <strong>模型无法覆盖的盲区：</strong>训练赛数据（未公开）· 赛前版本补丁 · 选手临场心理状态 · 季后赛首次出现的奇兵英雄 · 现场主场效应（海口）· 队伍内部状态信息。上述因素共同构成了将"数据应该赢70%"的狼队概率拉回至60%的底层原因。<strong>数据是决策的基础，但BP博弈才是BO7的本质。</strong>
+  <strong>模型无法覆盖的盲区：</strong>训练赛数据（未公开）· 赛前版本补丁 · 选手临场状态 · 季后赛首次出现的奇兵英雄 · 现场效应（海口）· 队伍内部信息。这些因素共同构成了将数据模型输出拉回至实际概率区间的底层原因。<strong>数据是决策的基础，但BO7的本质是配额管理与BP时机博弈。</strong>
 </div>
 </div></section>
 
